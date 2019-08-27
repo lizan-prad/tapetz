@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BB34E962315A16B00DAD5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */; };
+		7BB34E982315A16B00DAD5F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34E972315A16B00DAD5F5 /* ViewController.swift */; };
+		7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB34E992315A16B00DAD5F5 /* Main.storyboard */; };
+		7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB34E9C2315A16F00DAD5F5 /* Assets.xcassets */; };
+		7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB34E9E2315A16F00DAD5F5 /* LaunchScreen.storyboard */; };
+		7BB34EAB2315A16F00DAD5F5 /* TapetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EAA2315A16F00DAD5F5 /* TapetTests.swift */; };
+		7BB34EB62315A16F00DAD5F5 /* TapetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EB52315A16F00DAD5F5 /* TapetUITests.swift */; };
+		7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EC42315A96800DAD5F5 /* PictureModel.swift */; };
+		A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */; };
+		D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */; };
+		FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BB34EA72315A16F00DAD5F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB34E8A2315A16B00DAD5F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB34E912315A16B00DAD5F5;
+			remoteInfo = Tapet;
+		};
+		7BB34EB22315A16F00DAD5F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB34E8A2315A16B00DAD5F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB34E912315A16B00DAD5F5;
+			remoteInfo = Tapet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33DE1D57CA567F6B6C177E7C /* Pods-Tapet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.debug.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.debug.xcconfig"; sourceTree = "<group>"; };
+		7BB34E922315A16B00DAD5F5 /* Tapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BB34E972315A16B00DAD5F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BB34E9A2315A16B00DAD5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BB34E9C2315A16F00DAD5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BB34E9F2315A16F00DAD5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BB34EA12315A16F00DAD5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB34EA62315A16F00DAD5F5 /* TapetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB34EAA2315A16F00DAD5F5 /* TapetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapetTests.swift; sourceTree = "<group>"; };
+		7BB34EAC2315A16F00DAD5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB34EB12315A16F00DAD5F5 /* TapetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB34EB52315A16F00DAD5F5 /* TapetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapetUITests.swift; sourceTree = "<group>"; };
+		7BB34EB72315A16F00DAD5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB34EC42315A96800DAD5F5 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
+		7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		957989ADFF439551F809CEA6 /* Pods-TapetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetUITests.release.xcconfig"; path = "Target Support Files/Pods-TapetUITests/Pods-TapetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A93EDFA424E739F5606F65B /* Pods-TapetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.release.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.release.xcconfig"; sourceTree = "<group>"; };
+		A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.debug.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.release.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.release.xcconfig"; sourceTree = "<group>"; };
+		FE6DFE821802AA086D93E725 /* Pods-TapetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetUITests.debug.xcconfig"; path = "Target Support Files/Pods-TapetUITests/Pods-TapetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BB34E8F2315A16B00DAD5F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EA32315A16F00DAD5F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EAE2315A16F00DAD5F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A577016085937B0E6D0B1ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */,
+				00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */,
+				DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BB34E892315A16B00DAD5F5 = {
+			isa = PBXGroup;
+			children = (
+				7BB34E942315A16B00DAD5F5 /* Tapet */,
+				7BB34EA92315A16F00DAD5F5 /* TapetTests */,
+				7BB34EB42315A16F00DAD5F5 /* TapetUITests */,
+				7BB34E932315A16B00DAD5F5 /* Products */,
+				8EBCF8D728B5FEB9FA547DB0 /* Pods */,
+				0A577016085937B0E6D0B1ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BB34E932315A16B00DAD5F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BB34E922315A16B00DAD5F5 /* Tapet.app */,
+				7BB34EA62315A16F00DAD5F5 /* TapetTests.xctest */,
+				7BB34EB12315A16F00DAD5F5 /* TapetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB34E942315A16B00DAD5F5 /* Tapet */ = {
+			isa = PBXGroup;
+			children = (
+				7BB34EC32315A94000DAD5F5 /* Models */,
+				7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */,
+				7BB34E972315A16B00DAD5F5 /* ViewController.swift */,
+				7BB34E992315A16B00DAD5F5 /* Main.storyboard */,
+				7BB34E9C2315A16F00DAD5F5 /* Assets.xcassets */,
+				7BB34E9E2315A16F00DAD5F5 /* LaunchScreen.storyboard */,
+				7BB34EA12315A16F00DAD5F5 /* Info.plist */,
+			);
+			path = Tapet;
+			sourceTree = "<group>";
+		};
+		7BB34EA92315A16F00DAD5F5 /* TapetTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BB34EAA2315A16F00DAD5F5 /* TapetTests.swift */,
+				7BB34EAC2315A16F00DAD5F5 /* Info.plist */,
+			);
+			path = TapetTests;
+			sourceTree = "<group>";
+		};
+		7BB34EB42315A16F00DAD5F5 /* TapetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BB34EB52315A16F00DAD5F5 /* TapetUITests.swift */,
+				7BB34EB72315A16F00DAD5F5 /* Info.plist */,
+			);
+			path = TapetUITests;
+			sourceTree = "<group>";
+		};
+		7BB34EC32315A94000DAD5F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7BB34EC42315A96800DAD5F5 /* PictureModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EBCF8D728B5FEB9FA547DB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33DE1D57CA567F6B6C177E7C /* Pods-Tapet.debug.xcconfig */,
+				DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */,
+				A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */,
+				9A93EDFA424E739F5606F65B /* Pods-TapetTests.release.xcconfig */,
+				FE6DFE821802AA086D93E725 /* Pods-TapetUITests.debug.xcconfig */,
+				957989ADFF439551F809CEA6 /* Pods-TapetUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BB34E912315A16B00DAD5F5 /* Tapet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB34EBA2315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "Tapet" */;
+			buildPhases = (
+				5AEF3EA3E75A48E0494B8748 /* [CP] Check Pods Manifest.lock */,
+				7BB34E8E2315A16B00DAD5F5 /* Sources */,
+				7BB34E8F2315A16B00DAD5F5 /* Frameworks */,
+				7BB34E902315A16B00DAD5F5 /* Resources */,
+				5C843F13BD01927121FF9465 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tapet;
+			productName = Tapet;
+			productReference = 7BB34E922315A16B00DAD5F5 /* Tapet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BB34EA52315A16F00DAD5F5 /* TapetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB34EBD2315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "TapetTests" */;
+			buildPhases = (
+				33812B9E6B03BCB081025C49 /* [CP] Check Pods Manifest.lock */,
+				7BB34EA22315A16F00DAD5F5 /* Sources */,
+				7BB34EA32315A16F00DAD5F5 /* Frameworks */,
+				7BB34EA42315A16F00DAD5F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BB34EA82315A16F00DAD5F5 /* PBXTargetDependency */,
+			);
+			name = TapetTests;
+			productName = TapetTests;
+			productReference = 7BB34EA62315A16F00DAD5F5 /* TapetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BB34EB02315A16F00DAD5F5 /* TapetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB34EC02315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "TapetUITests" */;
+			buildPhases = (
+				122D3A68BA9A97EA57D0098A /* [CP] Check Pods Manifest.lock */,
+				7BB34EAD2315A16F00DAD5F5 /* Sources */,
+				7BB34EAE2315A16F00DAD5F5 /* Frameworks */,
+				7BB34EAF2315A16F00DAD5F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BB34EB32315A16F00DAD5F5 /* PBXTargetDependency */,
+			);
+			name = TapetUITests;
+			productName = TapetUITests;
+			productReference = 7BB34EB12315A16F00DAD5F5 /* TapetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BB34E8A2315A16B00DAD5F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Lizan Pradhanang";
+				TargetAttributes = {
+					7BB34E912315A16B00DAD5F5 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					7BB34EA52315A16F00DAD5F5 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 7BB34E912315A16B00DAD5F5;
+					};
+					7BB34EB02315A16F00DAD5F5 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 7BB34E912315A16B00DAD5F5;
+					};
+				};
+			};
+			buildConfigurationList = 7BB34E8D2315A16B00DAD5F5 /* Build configuration list for PBXProject "Tapet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BB34E892315A16B00DAD5F5;
+			productRefGroup = 7BB34E932315A16B00DAD5F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BB34E912315A16B00DAD5F5 /* Tapet */,
+				7BB34EA52315A16F00DAD5F5 /* TapetTests */,
+				7BB34EB02315A16F00DAD5F5 /* TapetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BB34E902315A16B00DAD5F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */,
+				7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */,
+				7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EA42315A16F00DAD5F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EAF2315A16F00DAD5F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		122D3A68BA9A97EA57D0098A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33812B9E6B03BCB081025C49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AEF3EA3E75A48E0494B8748 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tapet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C843F13BD01927121FF9465 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BB34E8E2315A16B00DAD5F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */,
+				7BB34E982315A16B00DAD5F5 /* ViewController.swift in Sources */,
+				7BB34E962315A16B00DAD5F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EA22315A16F00DAD5F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB34EAB2315A16F00DAD5F5 /* TapetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BB34EAD2315A16F00DAD5F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB34EB62315A16F00DAD5F5 /* TapetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BB34EA82315A16F00DAD5F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB34E912315A16B00DAD5F5 /* Tapet */;
+			targetProxy = 7BB34EA72315A16F00DAD5F5 /* PBXContainerItemProxy */;
+		};
+		7BB34EB32315A16F00DAD5F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB34E912315A16B00DAD5F5 /* Tapet */;
+			targetProxy = 7BB34EB22315A16F00DAD5F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BB34E992315A16B00DAD5F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB34E9A2315A16B00DAD5F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BB34E9E2315A16F00DAD5F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB34E9F2315A16F00DAD5F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BB34EB82315A16F00DAD5F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BB34EB92315A16F00DAD5F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BB34EBB2315A16F00DAD5F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33DE1D57CA567F6B6C177E7C /* Pods-Tapet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = Tapet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.Tapet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BB34EBC2315A16F00DAD5F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = Tapet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.Tapet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BB34EBE2315A16F00DAD5F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = TapetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.TapetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapet.app/Tapet";
+			};
+			name = Debug;
+		};
+		7BB34EBF2315A16F00DAD5F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A93EDFA424E739F5606F65B /* Pods-TapetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = TapetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.TapetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapet.app/Tapet";
+			};
+			name = Release;
+		};
+		7BB34EC12315A16F00DAD5F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6DFE821802AA086D93E725 /* Pods-TapetUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = TapetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.TapetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tapet;
+			};
+			name = Debug;
+		};
+		7BB34EC22315A16F00DAD5F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 957989ADFF439551F809CEA6 /* Pods-TapetUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZRH6N3N65;
+				INFOPLIST_FILE = TapetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizan.tapet.TapetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tapet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BB34E8D2315A16B00DAD5F5 /* Build configuration list for PBXProject "Tapet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB34EB82315A16F00DAD5F5 /* Debug */,
+				7BB34EB92315A16F00DAD5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB34EBA2315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "Tapet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB34EBB2315A16F00DAD5F5 /* Debug */,
+				7BB34EBC2315A16F00DAD5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB34EBD2315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "TapetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB34EBE2315A16F00DAD5F5 /* Debug */,
+				7BB34EBF2315A16F00DAD5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB34EC02315A16F00DAD5F5 /* Build configuration list for PBXNativeTarget "TapetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB34EC12315A16F00DAD5F5 /* Debug */,
+				7BB34EC22315A16F00DAD5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BB34E8A2315A16B00DAD5F5 /* Project object */;
+}
