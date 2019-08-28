@@ -22,6 +22,7 @@ class ImageDetailViewController: UIViewController {
         self.hero.isEnabled = true
         
         self.navigationController?.navigationBar.isHidden = true
+        
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
             
         }
@@ -30,12 +31,20 @@ class ImageDetailViewController: UIViewController {
         swipeGesture.direction = .down
         self.wallpaperImage.addGestureRecognizer(swipeGesture)
         self.wallpaperImage.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(handleTap)))
+        self.handleTap()
         // Do any additional setup after loading the view.
+    }
+    @IBAction func backAction(_ sender: Any) {
+        self.dismissView()
+    }
+    
+    @objc func dismissView() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if gesture.direction == .down {
-            self.navigationController?.dismiss(animated: true, completion: nil)
+            self.dismissView()
         }
     }
     
