@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tearmsBtn.layer.borderColor = UIColor.init(hex: "#2B2B2B").cgColor
-        tearmsBtn.layer.borderWidth = 1
+        tearmsBtn.layer.borderWidth = 3
         tearmsBtn.round()
         privacyBtn.round()
         // Do any additional setup after loading the view.

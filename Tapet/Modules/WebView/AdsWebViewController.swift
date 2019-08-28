@@ -55,14 +55,13 @@ class AppInfoWebViewController : BaseWebViewController {
         if let urlstring = urlString, let url = URL(string: urlstring)  {
             self.webView.load(URLRequest(url: url))
         }
-
         onFinished = {
             self.view.bringSubviewToFront(self.shadowLine)
         }
     }
 
     func addDissmissBtn() {
-        let cancelBtn = UIBarButtonItem(image: UIImage(named:"close_small"), style: .plain, target: self, action:#selector(dissmissWebView))
+        let cancelBtn = UIBarButtonItem(title: "Close", style: .plain, target: self, action:#selector(dissmissWebView))
         cancelBtn.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = cancelBtn

@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.tintColor = Constants.baseColor
         nav.isTranslucent = false
         nav.shadowImage = UIImage()
+        nav.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         // Override point for customization after application launch.
         return true
     }
