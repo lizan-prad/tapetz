@@ -20,7 +20,6 @@ class ImageDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         wallpaperImage.hero.id = picture?.id
         self.hero.isEnabled = true
         self.navigationController?.navigationBar.isHidden = true
@@ -73,7 +72,6 @@ class ImageDetailViewController: UIViewController {
             vc.didDismiss = {
                 currentVc = self
                 admobDelegate.showAd()
-                
             }
             self.present(vc, animated: true, completion: nil)
             

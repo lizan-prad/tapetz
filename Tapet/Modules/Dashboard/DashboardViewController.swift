@@ -13,6 +13,9 @@ import Hero
 
 class DashboardViewController: CustomTransitionViewController {
 
+    @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var wallpapers: [PictureModel]? {
@@ -23,24 +26,64 @@ class DashboardViewController: CustomTransitionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchView.isHidden = true
+        self.searchBtn.isHidden = searchField.text?.count == 0
         collectionView.dataSource = self
         collectionView.delegate = self
         let imgView = UIImageView.init(image: UIImage.init(named: "4960330-256"))
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "search"), style: .plain, target: self, action: #selector(searchTapped))
+        searchField.round()
+        searchField.addTarget(self, action: #selector(didChangeText(sender:)), for: .editingChanged)
+        searchField.attributedPlaceholder = NSAttributedString.init(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         fetchWallpapers()
+    }
+    
+    @objc func didChangeText(sender: UITextField) {
+        
+            searchBtn.hideWithAnimation(hidden: sender.text?.count == 0)
+        if sender.text?.count == 0 {
+            self.fetchWallpapers()
+        }
+    }
+    
+    @objc func searchTapped() {
+        setView(view: self.searchView)
+        
+    }
+    
+    func setView(view: UIView) {
+        UIView.transition(with: view, duration: 0.7, options: .showHideTransitionViews, animations: {
+            view.isHidden = !view.isHidden
+        })
+    }
+    
+    func searchWallpapers(text: String) {
+        self.startAnimating(type: .ballGridPulse)
+        Auth.shared.request(SearchBaseModel.self, urlExt: "search/photos?client_id=\(Constants.clientId)&page=1&per_page=100&query=\(text)", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+            self.stopAnimating()
+            self.wallpapers = model.result
+        }) { (error) in
+            self.stopAnimating()
+            
+        }
     }
     
     func fetchWallpapers() {
        
         self.startAnimating(type: .ballGridPulse)
-        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "?client_id=\(Constants.clientId)&page=1&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.stopAnimating()
             self.wallpapers = model.data
         }) { (error) in
             self.stopAnimating()
      
         }
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.searchWallpapers(text: self.searchField.text ?? "")
     }
 }
 
@@ -69,5 +112,13 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         let nav = UINavigationController.init(rootViewController: vc)
         nav.hero.isEnabled = true
         self.present(nav, animated: true, completion: nil)
+    }
+}
+
+extension UIView {
+    func hideWithAnimation(hidden: Bool) {
+        UIView.transition(with: self, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.isHidden = hidden
+        })
     }
 }

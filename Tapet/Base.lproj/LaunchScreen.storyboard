@@ -18,25 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4960330-256" translatesAutoresizingMaskIntoConstraints="NO" id="QRu-M9-0oz">
-                                <rect key="frame" x="152" y="423" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="1aZ-ej-TDF"/>
-                                    <constraint firstAttribute="height" constant="50" id="ag2-73-fcc"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="QRu-M9-0oz">
+                                <rect key="frame" x="109.5" y="374.5" width="195" height="147"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53u-AP-qAu">
-                                <rect key="frame" x="199" y="433.5" width="67" height="49"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="39"/>
-                                <color key="textColor" red="0.99950796365737915" green="0.33546888828277588" blue="0.33688205480575562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.14901960784313725" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="53u-AP-qAu" firstAttribute="centerY" secondItem="QRu-M9-0oz" secondAttribute="centerY" constant="10" id="Ci1-ix-Gdl"/>
-                            <constraint firstItem="53u-AP-qAu" firstAttribute="leading" secondItem="QRu-M9-0oz" secondAttribute="trailing" constant="-3" id="E4r-wy-ScV"/>
-                            <constraint firstItem="QRu-M9-0oz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-30" id="HHa-h6-CKD"/>
+                            <constraint firstItem="QRu-M9-0oz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HHa-h6-CKD"/>
                             <constraint firstItem="QRu-M9-0oz" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zhh-AE-fiB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4960330-256" width="30" height="30"/>
+        <image name="launch" width="195" height="147"/>
     </resources>
 </document>

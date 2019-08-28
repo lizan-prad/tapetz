@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B1E1DDF23171285004A35CA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E1DDB23171285004A35CA /* BaseViewController.swift */; };
+		7B1E1DE023171285004A35CA /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E1DDC23171285004A35CA /* BaseWebViewController.swift */; };
+		7B1E1DE123171285004A35CA /* Ads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E1DDD23171285004A35CA /* Ads.storyboard */; };
+		7B1E1DE223171285004A35CA /* AdsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E1DDE23171285004A35CA /* AdsWebViewController.swift */; };
 		7BB34E962315A16B00DAD5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */; };
 		7BB34E982315A16B00DAD5F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34E972315A16B00DAD5F5 /* ViewController.swift */; };
 		7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB34E992315A16B00DAD5F5 /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 /* Begin PBXFileReference section */
 		00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DE1D57CA567F6B6C177E7C /* Pods-Tapet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.debug.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.debug.xcconfig"; sourceTree = "<group>"; };
+		7B1E1DDB23171285004A35CA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7B1E1DDC23171285004A35CA /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		7B1E1DDD23171285004A35CA /* Ads.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ads.storyboard; sourceTree = "<group>"; };
+		7B1E1DDE23171285004A35CA /* AdsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsWebViewController.swift; sourceTree = "<group>"; };
 		7BB34E922315A16B00DAD5F5 /* Tapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BB34E972315A16B00DAD5F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +149,17 @@
 				DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B1E1DDA23171285004A35CA /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7B1E1DDB23171285004A35CA /* BaseViewController.swift */,
+				7B1E1DDC23171285004A35CA /* BaseWebViewController.swift */,
+				7B1E1DDD23171285004A35CA /* Ads.storyboard */,
+				7B1E1DDE23171285004A35CA /* AdsWebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		7BB34E892315A16B00DAD5F5 = {
@@ -243,6 +262,7 @@
 		A00EE9AF23164E5B007D4E14 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7B1E1DDA23171285004A35CA /* WebView */,
 				A00EE9B723166563007D4E14 /* ImageDetails */,
 				A00EE9B623166556007D4E14 /* Dashboard */,
 			);
@@ -381,6 +401,7 @@
 				7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */,
 				7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */,
 				7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */,
+				7B1E1DE123171285004A35CA /* Ads.storyboard in Resources */,
 				A00EE9B523164EAB007D4E14 /* Dashboard.storyboard in Resources */,
 				A00EE9B923166578007D4E14 /* ImageDetails.storyboard in Resources */,
 			);
@@ -477,40 +498,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -526,6 +516,7 @@
 			files = (
 				A00EE9A1231643B5007D4E14 /* UIViewControllerExtensions.swift in Sources */,
 				A00EE9A0231643B5007D4E14 /* PersestenceType.swift in Sources */,
+				7B1E1DE223171285004A35CA /* AdsWebViewController.swift in Sources */,
 				7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */,
 				A00EE9AD2316452D007D4E14 /* Sponsor.swift in Sources */,
 				A00EE9AC2316452D007D4E14 /* Urls.swift in Sources */,
@@ -537,6 +528,8 @@
 				A00EE9B123164E78007D4E14 /* DashboardViewController.swift in Sources */,
 				A00EE9C023168020007D4E14 /* ImageDataViewController.swift in Sources */,
 				A00EE9C42316A85A007D4E14 /* AdMobDelegate.swift in Sources */,
+				7B1E1DDF23171285004A35CA /* BaseViewController.swift in Sources */,
+				7B1E1DE023171285004A35CA /* BaseWebViewController.swift in Sources */,
 				A00EE9AA2316452D007D4E14 /* Links.swift in Sources */,
 				A00EE9A92316452D007D4E14 /* User.swift in Sources */,
 				A00EE99F231643B5007D4E14 /* ColorExtension.swift in Sources */,
