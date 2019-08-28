@@ -23,7 +23,7 @@ class AdMobDelegate: NSObject, GADInterstitialDelegate {
         interstitialView = GADInterstitial(adUnitID: "ca-app-pub-4677080914275981/7639254085")
         interstitialView.delegate = self
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        request.testDevices = [kGADSimulatorID]
         interstitialView.load(request)
         return interstitialView
     }
