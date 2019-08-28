@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.19215686274509802" green="0.19607843137254902" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.14901960784313725" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bJR-sj-FPf" secondAttribute="bottom" constant="40" id="Ege-aR-PZ9"/>
                             <constraint firstItem="bJR-sj-FPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f4V-NU-s29"/>

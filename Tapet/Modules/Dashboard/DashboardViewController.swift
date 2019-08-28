@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import TransitionButton
-
+import Hero
 
 class DashboardViewController: CustomTransitionViewController {
 
@@ -27,7 +27,6 @@ class DashboardViewController: CustomTransitionViewController {
         collectionView.delegate = self
         let imgView = UIImageView.init(image: UIImage.init(named: "4960330-256"))
         imgView.contentMode = .scaleAspectFit
-        imgView.frame.size.height = 40
         self.navigationItem.titleView = imgView
         fetchWallpapers()
     }
@@ -59,5 +58,16 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCell", for: indexPath) as! DashboardCell
         cell.model = wallpapers?[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! DashboardCell
+        cell.imageView.hero.id = cell.model?.id
+        let vc = UIStoryboard.init(name: "ImageDetails", bundle: nil).instantiateViewController(withIdentifier: "ImageDetailViewController") as! ImageDetailViewController
+        vc.picture = cell.model
+        vc.image = cell.imageView.image
+        let nav = UINavigationController.init(rootViewController: vc)
+        nav.hero.isEnabled = true
+        self.present(nav, animated: true, completion: nil)
     }
 }

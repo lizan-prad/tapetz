@@ -31,6 +31,9 @@
 		A00EE9B523164EAB007D4E14 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00EE9B423164EAB007D4E14 /* Dashboard.storyboard */; };
 		A00EE9B923166578007D4E14 /* ImageDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00EE9B823166578007D4E14 /* ImageDetails.storyboard */; };
 		A00EE9BB231667C1007D4E14 /* NVIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BA231667C1007D4E14 /* NVIndicator.swift */; };
+		A00EE9BE23167388007D4E14 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BD23167388007D4E14 /* ImageDetailViewController.swift */; };
+		A00EE9C023168020007D4E14 /* ImageDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */; };
+		A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C12316894E007D4E14 /* SavedViewController.swift */; };
 		A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */; };
 		D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */; };
 		FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */; };
@@ -90,6 +93,9 @@
 		A00EE9B423164EAB007D4E14 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		A00EE9B823166578007D4E14 /* ImageDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDetails.storyboard; sourceTree = "<group>"; };
 		A00EE9BA231667C1007D4E14 /* NVIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVIndicator.swift; sourceTree = "<group>"; };
+		A00EE9BD23167388007D4E14 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataViewController.swift; sourceTree = "<group>"; };
+		A00EE9C12316894E007D4E14 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.debug.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.release.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				A00EE9B823166578007D4E14 /* ImageDetails.storyboard */,
+				A00EE9BD23167388007D4E14 /* ImageDetailViewController.swift */,
+				A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */,
+				A00EE9C12316894E007D4E14 /* SavedViewController.swift */,
 			);
 			path = ImageDetails;
 			sourceTree = "<group>";
@@ -468,6 +477,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -484,6 +494,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -513,15 +524,18 @@
 				A00EE9AC2316452D007D4E14 /* Urls.swift in Sources */,
 				7BB34E982315A16B00DAD5F5 /* ViewController.swift in Sources */,
 				A00EE9B323164E9F007D4E14 /* DashboardCell.swift in Sources */,
+				A00EE9BE23167388007D4E14 /* ImageDetailViewController.swift in Sources */,
 				7BB34E962315A16B00DAD5F5 /* AppDelegate.swift in Sources */,
 				A00EE9BB231667C1007D4E14 /* NVIndicator.swift in Sources */,
 				A00EE9B123164E78007D4E14 /* DashboardViewController.swift in Sources */,
+				A00EE9C023168020007D4E14 /* ImageDataViewController.swift in Sources */,
 				A00EE9AA2316452D007D4E14 /* Links.swift in Sources */,
 				A00EE9A92316452D007D4E14 /* User.swift in Sources */,
 				A00EE99F231643B5007D4E14 /* ColorExtension.swift in Sources */,
 				A00EE99E231643B5007D4E14 /* UIViewController+WhisperExtension.swift in Sources */,
 				A00EE9AB2316452D007D4E14 /* Profile_image.swift in Sources */,
 				A00EE9AE2316452D007D4E14 /* Sponsorship.swift in Sources */,
+				A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */,
 				A00EE99923164369007D4E14 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

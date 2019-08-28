@@ -13,6 +13,7 @@ target 'Tapet' do
   pod 'TransitionButton'
   pod 'SDWebImage', '~> 4.0'
   pod 'NVActivityIndicatorView'
+  pod 'Hero'
 #  pod 'LiquidLoader'
 #  pod 'Whisper'
 
