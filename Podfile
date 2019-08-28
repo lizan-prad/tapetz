@@ -8,6 +8,14 @@ target 'Tapet' do
   # Pods for Tapet
   pod 'Alamofire'
   pod 'ObjectMapper+Realm'
+  pod 'SwiftyJSON'
+  pod 'MBProgressHUD'
+  pod 'TransitionButton'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'NVActivityIndicatorView'
+#  pod 'LiquidLoader'
+#  pod 'Whisper'
+
   target 'TapetTests' do
     inherit! :search_paths
     # Pods for testing

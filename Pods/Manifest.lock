@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.8.2)
+  - MBProgressHUD (1.1.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - ObjectMapper (3.5.1)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
@@ -9,26 +13,46 @@ PODS:
   - Realm/Headers (3.17.3)
   - RealmSwift (3.17.3):
     - Realm (= 3.17.3)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - SwiftyJSON (5.0.0)
+  - TransitionButton (0.5.2)
 
 DEPENDENCIES:
   - Alamofire
+  - MBProgressHUD
+  - NVActivityIndicatorView
   - "ObjectMapper+Realm"
+  - SDWebImage (~> 4.0)
+  - SwiftyJSON
+  - TransitionButton
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - MBProgressHUD
+    - NVActivityIndicatorView
     - ObjectMapper
     - "ObjectMapper+Realm"
     - Realm
     - RealmSwift
+    - SDWebImage
+    - SwiftyJSON
+    - TransitionButton
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 199109d76c24dc84d8aeae58a03077df957252cd
+PODFILE CHECKSUM: 55b0292b54ccf83b198acd5aa0ec8421dcbb5baa
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.6.1

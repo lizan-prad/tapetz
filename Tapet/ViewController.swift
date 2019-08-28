@@ -8,15 +8,38 @@
 
 import UIKit
 import Alamofire
+import TransitionButton
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var enterBtn: TransitionButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func enterAction(_ sender: Any) {
+        enterBtn.startAnimation()
+        let qualityOfServiceClass = DispatchQoS.QoSClass.background
+        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+        backgroundQueue.async(execute: {
+            
+            sleep(3) // 3: Do your networking task or background work here.
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                // 4: Stop the animation, here you have three options for the `animationStyle` property:
+                // .expand: useful when the task has been compeletd successfully and you want to expand the button and transit to another view controller in the completion callback
+                // .shake: when you want to reflect to the user that the task did not complete successfly
+                // .normal
+                self.enterBtn.stopAnimation(animationStyle: .expand, completion: {
+                    let secondVC = UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+                    self.present(UINavigationController.init(rootViewController: secondVC) , animated: true, completion: nil)
+                })
+            })
+        })
+    }
+    
 }
 
 

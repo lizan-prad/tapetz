@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let nav = UINavigationBar.appearance()
+        nav.barTintColor = UIColor.init(hex: "#252627")
+        nav.isTranslucent = false
         // Override point for customization after application launch.
         return true
     }

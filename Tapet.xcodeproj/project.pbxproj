@@ -15,6 +15,22 @@
 		7BB34EAB2315A16F00DAD5F5 /* TapetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EAA2315A16F00DAD5F5 /* TapetTests.swift */; };
 		7BB34EB62315A16F00DAD5F5 /* TapetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EB52315A16F00DAD5F5 /* TapetUITests.swift */; };
 		7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB34EC42315A96800DAD5F5 /* PictureModel.swift */; };
+		A00EE99923164369007D4E14 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE99823164369007D4E14 /* Auth.swift */; };
+		A00EE99E231643B5007D4E14 /* UIViewController+WhisperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE99A231643B5007D4E14 /* UIViewController+WhisperExtension.swift */; };
+		A00EE99F231643B5007D4E14 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE99B231643B5007D4E14 /* ColorExtension.swift */; };
+		A00EE9A0231643B5007D4E14 /* PersestenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE99C231643B5007D4E14 /* PersestenceType.swift */; };
+		A00EE9A1231643B5007D4E14 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE99D231643B5007D4E14 /* UIViewControllerExtensions.swift */; };
+		A00EE9A92316452D007D4E14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A32316452C007D4E14 /* User.swift */; };
+		A00EE9AA2316452D007D4E14 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A42316452D007D4E14 /* Links.swift */; };
+		A00EE9AB2316452D007D4E14 /* Profile_image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A52316452D007D4E14 /* Profile_image.swift */; };
+		A00EE9AC2316452D007D4E14 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A62316452D007D4E14 /* Urls.swift */; };
+		A00EE9AD2316452D007D4E14 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A72316452D007D4E14 /* Sponsor.swift */; };
+		A00EE9AE2316452D007D4E14 /* Sponsorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9A82316452D007D4E14 /* Sponsorship.swift */; };
+		A00EE9B123164E78007D4E14 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9B023164E78007D4E14 /* DashboardViewController.swift */; };
+		A00EE9B323164E9F007D4E14 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9B223164E9F007D4E14 /* DashboardCell.swift */; };
+		A00EE9B523164EAB007D4E14 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00EE9B423164EAB007D4E14 /* Dashboard.storyboard */; };
+		A00EE9B923166578007D4E14 /* ImageDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00EE9B823166578007D4E14 /* ImageDetails.storyboard */; };
+		A00EE9BB231667C1007D4E14 /* NVIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BA231667C1007D4E14 /* NVIndicator.swift */; };
 		A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */; };
 		D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */; };
 		FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */; };
@@ -57,6 +73,23 @@
 		7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		957989ADFF439551F809CEA6 /* Pods-TapetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetUITests.release.xcconfig"; path = "Target Support Files/Pods-TapetUITests/Pods-TapetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A93EDFA424E739F5606F65B /* Pods-TapetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.release.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.release.xcconfig"; sourceTree = "<group>"; };
+		A00EE99623163EF0007D4E14 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00EE99823164369007D4E14 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		A00EE99A231643B5007D4E14 /* UIViewController+WhisperExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+WhisperExtension.swift"; sourceTree = "<group>"; };
+		A00EE99B231643B5007D4E14 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		A00EE99C231643B5007D4E14 /* PersestenceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersestenceType.swift; sourceTree = "<group>"; };
+		A00EE99D231643B5007D4E14 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		A00EE9A32316452C007D4E14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A00EE9A42316452D007D4E14 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		A00EE9A52316452D007D4E14 /* Profile_image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_image.swift; sourceTree = "<group>"; };
+		A00EE9A62316452D007D4E14 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		A00EE9A72316452D007D4E14 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		A00EE9A82316452D007D4E14 /* Sponsorship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsorship.swift; sourceTree = "<group>"; };
+		A00EE9B023164E78007D4E14 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A00EE9B223164E9F007D4E14 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		A00EE9B423164EAB007D4E14 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		A00EE9B823166578007D4E14 /* ImageDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDetails.storyboard; sourceTree = "<group>"; };
+		A00EE9BA231667C1007D4E14 /* NVIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVIndicator.swift; sourceTree = "<group>"; };
 		A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.debug.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.release.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +127,7 @@
 		0A577016085937B0E6D0B1ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A00EE99623163EF0007D4E14 /* ObjectMapper.framework */,
 				7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */,
 				00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */,
 				DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */,
@@ -126,6 +160,8 @@
 		7BB34E942315A16B00DAD5F5 /* Tapet */ = {
 			isa = PBXGroup;
 			children = (
+				A00EE9AF23164E5B007D4E14 /* Modules */,
+				A00EE9A2231643C6007D4E14 /* Base */,
 				7BB34EC32315A94000DAD5F5 /* Models */,
 				7BB34E952315A16B00DAD5F5 /* AppDelegate.swift */,
 				7BB34E972315A16B00DAD5F5 /* ViewController.swift */,
@@ -158,6 +194,12 @@
 		7BB34EC32315A94000DAD5F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A00EE9A42316452D007D4E14 /* Links.swift */,
+				A00EE9A52316452D007D4E14 /* Profile_image.swift */,
+				A00EE9A72316452D007D4E14 /* Sponsor.swift */,
+				A00EE9A82316452D007D4E14 /* Sponsorship.swift */,
+				A00EE9A62316452D007D4E14 /* Urls.swift */,
+				A00EE9A32316452C007D4E14 /* User.swift */,
 				7BB34EC42315A96800DAD5F5 /* PictureModel.swift */,
 			);
 			path = Models;
@@ -174,6 +216,46 @@
 				957989ADFF439551F809CEA6 /* Pods-TapetUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A00EE9A2231643C6007D4E14 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A00EE99B231643B5007D4E14 /* ColorExtension.swift */,
+				A00EE99C231643B5007D4E14 /* PersestenceType.swift */,
+				A00EE99A231643B5007D4E14 /* UIViewController+WhisperExtension.swift */,
+				A00EE99D231643B5007D4E14 /* UIViewControllerExtensions.swift */,
+				A00EE99823164369007D4E14 /* Auth.swift */,
+				A00EE9BA231667C1007D4E14 /* NVIndicator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A00EE9AF23164E5B007D4E14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A00EE9B723166563007D4E14 /* ImageDetails */,
+				A00EE9B623166556007D4E14 /* Dashboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A00EE9B623166556007D4E14 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A00EE9B023164E78007D4E14 /* DashboardViewController.swift */,
+				A00EE9B223164E9F007D4E14 /* DashboardCell.swift */,
+				A00EE9B423164EAB007D4E14 /* Dashboard.storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A00EE9B723166563007D4E14 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A00EE9B823166578007D4E14 /* ImageDetails.storyboard */,
+			);
+			path = ImageDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +369,8 @@
 				7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */,
 				7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */,
 				7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */,
+				A00EE9B523164EAB007D4E14 /* Dashboard.storyboard in Resources */,
+				A00EE9B923166578007D4E14 /* ImageDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +465,34 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -397,9 +506,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00EE9A1231643B5007D4E14 /* UIViewControllerExtensions.swift in Sources */,
+				A00EE9A0231643B5007D4E14 /* PersestenceType.swift in Sources */,
 				7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */,
+				A00EE9AD2316452D007D4E14 /* Sponsor.swift in Sources */,
+				A00EE9AC2316452D007D4E14 /* Urls.swift in Sources */,
 				7BB34E982315A16B00DAD5F5 /* ViewController.swift in Sources */,
+				A00EE9B323164E9F007D4E14 /* DashboardCell.swift in Sources */,
 				7BB34E962315A16B00DAD5F5 /* AppDelegate.swift in Sources */,
+				A00EE9BB231667C1007D4E14 /* NVIndicator.swift in Sources */,
+				A00EE9B123164E78007D4E14 /* DashboardViewController.swift in Sources */,
+				A00EE9AA2316452D007D4E14 /* Links.swift in Sources */,
+				A00EE9A92316452D007D4E14 /* User.swift in Sources */,
+				A00EE99F231643B5007D4E14 /* ColorExtension.swift in Sources */,
+				A00EE99E231643B5007D4E14 /* UIViewController+WhisperExtension.swift in Sources */,
+				A00EE9AB2316452D007D4E14 /* Profile_image.swift in Sources */,
+				A00EE9AE2316452D007D4E14 /* Sponsorship.swift in Sources */,
+				A00EE99923164369007D4E14 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +701,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZRH6N3N65;
 				INFOPLIST_FILE = Tapet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +721,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZRH6N3N65;
 				INFOPLIST_FILE = Tapet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
