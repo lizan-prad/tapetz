@@ -13,13 +13,18 @@ class SavedViewController: UIViewController {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
+    var didDismiss: (() -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backView.round()
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (_) in
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: {
+                self.didDismiss?()
+            })
         }
     }
     
 
 }
+

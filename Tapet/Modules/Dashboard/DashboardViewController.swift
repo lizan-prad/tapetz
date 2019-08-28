@@ -23,6 +23,7 @@ class DashboardViewController: CustomTransitionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Auth.shared.loadAd()
         collectionView.dataSource = self
         collectionView.delegate = self
         let imgView = UIImageView.init(image: UIImage.init(named: "4960330-256"))

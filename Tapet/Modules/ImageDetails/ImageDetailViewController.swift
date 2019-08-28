@@ -9,8 +9,10 @@
 import UIKit
 import Hero
 import SDWebImage
+import GoogleMobileAds
 
 class ImageDetailViewController: UIViewController {
+    
 
     @IBOutlet weak var wallpaperImage: UIImageView!
     var picture: PictureModel?
@@ -18,9 +20,9 @@ class ImageDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         wallpaperImage.hero.id = picture?.id
         self.hero.isEnabled = true
-        
         self.navigationController?.navigationBar.isHidden = true
         
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
@@ -68,7 +70,13 @@ class ImageDetailViewController: UIViewController {
             present(ac, animated: true)
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
+            vc.didDismiss = {
+                currentVc = self
+                admobDelegate.showAd()
+                
+            }
             self.present(vc, animated: true, completion: nil)
+            
         }
     }
 }

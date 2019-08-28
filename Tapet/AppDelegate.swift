@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let nav = UINavigationBar.appearance()
+        
+        // GOOGLE ADS SETUP
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        ////
         nav.barTintColor = UIColor.init(hex: "#252627")
         nav.isTranslucent = false
         // Override point for customization after application launch.

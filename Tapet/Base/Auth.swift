@@ -8,6 +8,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import SwiftyJSON
+import GoogleMobileAds
+
 
 struct Constants {
     static var baseUrl = "https://api.unsplash.com/photos/"
@@ -18,6 +20,14 @@ struct Constants {
 class Auth {
     
     static let shared = Auth()
+    
+   let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4677080914275981/7639254085")
+    
+    func loadAd() {
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
+    }
     
     func request<T: Mappable>(_ value: T.Type ,urlExt: String, method: HTTPMethod, param: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders?, completion: @escaping (T) -> (), failure: @escaping (Error) ->()){
         

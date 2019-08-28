@@ -14,6 +14,7 @@ target 'Tapet' do
   pod 'SDWebImage', '~> 4.0'
   pod 'NVActivityIndicatorView'
   pod 'Hero'
+  pod 'Google-Mobile-Ads-SDK'
 #  pod 'LiquidLoader'
 #  pod 'Whisper'
 
