@@ -39,6 +39,7 @@
 		A00EE9C023168020007D4E14 /* ImageDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */; };
 		A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C12316894E007D4E14 /* SavedViewController.swift */; };
 		A00EE9C42316A85A007D4E14 /* AdMobDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */; };
+		A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */; };
 		A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */; };
 		D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */; };
 		FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */; };
@@ -106,6 +107,7 @@
 		A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataViewController.swift; sourceTree = "<group>"; };
 		A00EE9C12316894E007D4E14 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDelegate.swift; sourceTree = "<group>"; };
+		A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.debug.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.release.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				A00EE9BD23167388007D4E14 /* ImageDetailViewController.swift */,
 				A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */,
 				A00EE9C12316894E007D4E14 /* SavedViewController.swift */,
+				A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */,
 			);
 			path = ImageDetails;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00EE9A1231643B5007D4E14 /* UIViewControllerExtensions.swift in Sources */,
+				A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */,
 				A00EE9A0231643B5007D4E14 /* PersestenceType.swift in Sources */,
 				7B1E1DE223171285004A35CA /* AdsWebViewController.swift in Sources */,
 				7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */,

@@ -23,30 +23,30 @@ class AdMobDelegate: NSObject, GADInterstitialDelegate {
         interstitialView = GADInterstitial(adUnitID: "ca-app-pub-4677080914275981/7639254085")
         interstitialView.delegate = self
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        request.testDevices = [kGADSimulatorID]
         interstitialView.load(request)
         return interstitialView
     }
     
     func showAd() {
-        if interstitialView != nil {
-            if (interstitialView.isReady == true){
-                interstitialView.present(fromRootViewController:currentVc)
-            } else {
-                print("ad wasn't ready")
+//        if interstitialView != nil {
+//            if (interstitialView.isReady == true){
+//                interstitialView.present(fromRootViewController:currentVc)
+//            } else {
+//                print("ad wasn't ready")
                 interstitialView = createAd()
-            }
-        } else {
-            print("ad wasn't ready")
-            interstitialView = createAd()
-        }
+//            }
+//        } else {
+//            print("ad wasn't ready")
+//            interstitialView = createAd()
+//        }
     }
     
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         print("Ad Received")
-        if ad.isReady {
-            interstitialView.present(fromRootViewController: currentVc)
-        }
+//        if ad.isReady {
+//            interstitialView.present(fromRootViewController:currentVc)
+//        }
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {

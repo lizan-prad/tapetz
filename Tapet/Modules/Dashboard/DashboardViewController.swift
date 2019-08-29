@@ -30,7 +30,7 @@ class DashboardViewController: CustomTransitionViewController {
         self.searchBtn.isHidden = searchField.text?.count == 0
         collectionView.dataSource = self
         collectionView.delegate = self
-        let imgView = UIImageView.init(image: UIImage.init(named: "4960330-256"))
+        let imgView = UIImageView.init(image: UIImage.init(named: "logo"))
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "search"), style: .plain, target: self, action: #selector(searchTapped))
@@ -53,8 +53,13 @@ class DashboardViewController: CustomTransitionViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentVc = self
+    }
+    
     func setView(view: UIView) {
-        UIView.transition(with: view, duration: 0.7, options: .showHideTransitionViews, animations: {
+        UIView.transition(with: view, duration: 0.5, options: .showHideTransitionViews, animations: {
             view.isHidden = !view.isHidden
         })
     }

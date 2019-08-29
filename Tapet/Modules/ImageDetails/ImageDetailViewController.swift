@@ -20,6 +20,7 @@ class ImageDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        admobDelegate.showAd()
         wallpaperImage.hero.id = picture?.id
         self.hero.isEnabled = true
         self.navigationController?.navigationBar.isHidden = true
@@ -52,6 +53,7 @@ class ImageDetailViewController: UIViewController {
     @objc func handleTap() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ImageDataViewController") as! ImageDataViewController
         vc.model = self.picture
+        vc.image = self.image
         vc.didTapDownload = {
             self.savePhoto()
         }
@@ -71,7 +73,9 @@ class ImageDetailViewController: UIViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
             vc.didDismiss = {
                 currentVc = self
-                admobDelegate.showAd()
+                if (admobDelegate.interstitialView.isReady == true){
+                    admobDelegate.interstitialView.present(fromRootViewController:currentVc)
+                }
             }
             self.present(vc, animated: true, completion: nil)
             

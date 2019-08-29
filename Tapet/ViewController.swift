@@ -15,9 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterBtn: TransitionButton!
     @IBOutlet weak var privacyBtn: UIButton!
     @IBOutlet weak var tearmsBtn: UIButton!
+    @IBOutlet weak var checkBtn: UIButton!
+    
+    var agreed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         enterBtn.isEnabled = agreed
         tearmsBtn.layer.borderColor = UIColor.init(hex: "#2B2B2B").cgColor
         tearmsBtn.layer.borderWidth = 3
         tearmsBtn.round()
@@ -38,7 +42,14 @@ class ViewController: UIViewController {
         self.present(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
     }
     
+    @IBAction func termsAggrementAction(_ sender: Any) {
+        agreed = !agreed
+        enterBtn.isEnabled = agreed
+        checkBtn.setImage(UIImage.init(named: agreed ? "check" : "uncheck"), for: .normal)
+    }
+    
     @IBAction func enterAction(_ sender: Any) {
+        UserDefaults.standard.set("ACCEPTED", forKey: "ID")
         enterBtn.startAnimation()
         let qualityOfServiceClass = DispatchQoS.QoSClass.background
         let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)

@@ -13,36 +13,11 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tapet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Tapet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-sj-FPf" customClass="TransitionButton" customModule="TransitionButton">
-                                <rect key="frame" x="132" y="772" width="150" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Z5Y-lU-xss"/>
-                                    <constraint firstAttribute="height" constant="50" id="qvP-gO-UUf"/>
-                                </constraints>
-                                <state key="normal" title="ENTER">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyf-Rm-CYx"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="4vF-0J-6EX">
                                 <rect key="frame" x="70.5" y="104" width="273.5" height="279"/>
                                 <constraints>
@@ -50,8 +25,8 @@
                                     <constraint firstAttribute="width" constant="273.5" id="lJc-8X-m2M"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have read the &quot;Tearms and Conditions&quot; and &quot;Privacy and policy&quot;." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-JA-0Ic">
-                                <rect key="frame" x="20" y="688.5" width="374" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have read the &quot;Tearms and Conditions&quot; and &quot;Privacy and policy&quot;." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-JA-0Ic">
+                                <rect key="frame" x="79" y="688.5" width="305" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -83,24 +58,63 @@
                                     <action selector="privacyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJW-vF-ijk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-sj-FPf" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="132" y="772" width="150" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Z5Y-lU-xss"/>
+                                    <constraint firstAttribute="height" constant="50" id="qvP-gO-UUf"/>
+                                </constraints>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyf-Rm-CYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQv-Yu-Edb">
+                                <rect key="frame" x="40" y="693.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="TU5-CG-dYm"/>
+                                    <constraint firstAttribute="width" constant="24" id="spw-o8-Nub"/>
+                                </constraints>
+                                <state key="normal" image="uncheck"/>
+                                <connections>
+                                    <action selector="termsAggrementAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCE-iT-FWT"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.14509803921568626" green="0.14901960784313725" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.14901960780000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Le-JA-0Ic" firstAttribute="top" secondItem="xzq-FY-MpD" secondAttribute="bottom" constant="50" id="9vm-bw-1F8"/>
                             <constraint firstItem="xzq-FY-MpD" firstAttribute="top" secondItem="HKT-Jp-liu" secondAttribute="bottom" constant="30" id="Aai-jE-GSz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bJR-sj-FPf" secondAttribute="bottom" constant="40" id="Ege-aR-PZ9"/>
                             <constraint firstItem="4vF-0J-6EX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="J0l-vW-k21"/>
                             <constraint firstItem="4vF-0J-6EX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QiN-Yj-EPH"/>
+                            <constraint firstItem="AQv-Yu-Edb" firstAttribute="centerY" secondItem="7Le-JA-0Ic" secondAttribute="centerY" id="cIA-KL-jQP"/>
                             <constraint firstItem="bJR-sj-FPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f4V-NU-s29"/>
                             <constraint firstItem="xzq-FY-MpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g14-E7-RWk"/>
+                            <constraint firstItem="7Le-JA-0Ic" firstAttribute="leading" secondItem="AQv-Yu-Edb" secondAttribute="trailing" constant="15" id="j5B-KT-0bg"/>
                             <constraint firstItem="bJR-sj-FPf" firstAttribute="top" secondItem="7Le-JA-0Ic" secondAttribute="bottom" constant="50" id="lxM-YV-gBS"/>
-                            <constraint firstItem="7Le-JA-0Ic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ox3-4M-AW3"/>
                             <constraint firstItem="HKT-Jp-liu" firstAttribute="centerX" secondItem="xzq-FY-MpD" secondAttribute="centerX" id="wwO-5o-ZhQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Le-JA-0Ic" secondAttribute="trailing" constant="20" id="xW9-rG-a8u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Le-JA-0Ic" secondAttribute="trailing" constant="30" id="xW9-rG-a8u"/>
+                            <constraint firstItem="AQv-Yu-Edb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="zdF-JU-YNp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="checkBtn" destination="AQv-Yu-Edb" id="Pf5-p9-hNy"/>
                         <outlet property="enterBtn" destination="bJR-sj-FPf" id="2BR-C2-VGQ"/>
                         <outlet property="privacyBtn" destination="xzq-FY-MpD" id="wSj-Xz-Mjk"/>
                         <outlet property="tearmsBtn" destination="HKT-Jp-liu" id="v8r-FP-owr"/>
@@ -113,5 +127,6 @@
     </scenes>
     <resources>
         <image name="launch" width="195" height="147"/>
+        <image name="uncheck" width="24" height="24"/>
     </resources>
 </document>

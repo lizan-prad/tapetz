@@ -23,7 +23,9 @@ class ImageDataViewController: UIViewController {
     @IBOutlet weak var downloadView: UIView!
     
     var didTapDownload: (() -> ())?
+    var didtapUserProfile:(() -> ())?
     var model: PictureModel?
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,15 @@ class ImageDataViewController: UIViewController {
         downloadView.isUserInteractionEnabled = true
         downloadView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(downloadTap)))
         userProfileView.round()
+        userProfileView.isUserInteractionEnabled = true
+        userProfileView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(viewUserProfile)))
+    }
+    
+    @objc func viewUserProfile() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+        vc.model = self.model
+        vc.image = image
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func downloadTap() {
@@ -46,7 +57,7 @@ class ImageDataViewController: UIViewController {
     
     func setup() {
         likes.text = "\(model?.likes ?? 0)"
-        userProfileView.sd_setImage(with: URL.init(string: model?.user?.profile_image?.medium ?? ""), placeholderImage: nil, options: .refreshCached) { (_, _, _, _) in
+        userProfileView.sd_setImage(with: URL.init(string: model?.user?.profile_image?.medium ?? ""), placeholderImage: UIImage.init(named: "3336938-64"), options: .refreshCached) { (_, _, _, _) in
         }
         userName.text = model?.user?.name
         imageDimenssion.text = "\(model?.width ?? 0) x \(model?.height ?? 0)"

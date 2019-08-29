@@ -21,13 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // GOOGLE ADS SETUP
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         ////
         nav.barTintColor = UIColor.init(hex: "#252627")
         nav.tintColor = Constants.baseColor
         nav.isTranslucent = false
         nav.shadowImage = UIImage()
         nav.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        if UserDefaults.standard.value(forKey: "ID") == nil {
+            UIView.transition(with: window ?? UIWindow(), duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            }, completion: { completed in
+                // maybe do something here
+            })
+        } else {
+//            UIView.transition(with: window ?? UIWindow(), duration: 0.4, options: .showHideTransitionViews, animations: {
+                self.window?.rootViewController = UINavigationController.init(rootViewController: UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController)
+//            }, completion: { completed in
+//                // maybe do something here
+//            })
+        }
+        
         // Override point for customization after application launch.
         return true
     }
@@ -57,3 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIViewController {
+    
+}
