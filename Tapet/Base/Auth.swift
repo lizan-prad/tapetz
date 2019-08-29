@@ -12,7 +12,7 @@ import GoogleMobileAds
 
 
 struct Constants {
-    static var baseUrl = "https://api.unsplash.com/photos/"
+    static var baseUrl = "https://api.unsplash.com/"
     static var clientId = "22502590ac9a324c3c5cc2cebe61c13e6b7e6a18365377c38b2684f78ed8c358"
     static var baseColor = UIColor.init(hex: "#FF5656")//UIColor.init(hex: "#A53A79")
 }

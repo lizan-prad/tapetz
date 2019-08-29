@@ -22,6 +22,19 @@ class BasePictureModel<T: Mappable>: Mappable {
     }
 }
 
+class SearchBaseModel: Mappable {
+    
+    var result: [PictureModel]?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        result <- map["results"]
+    }
+}
+
 class PictureModel: Mappable {
     var id : String?
     var created_at : String?

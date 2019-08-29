@@ -13,12 +13,31 @@ import TransitionButton
 class ViewController: UIViewController {
 
     @IBOutlet weak var enterBtn: TransitionButton!
+    @IBOutlet weak var privacyBtn: UIButton!
+    @IBOutlet weak var tearmsBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tearmsBtn.layer.borderColor = UIColor.init(hex: "#2B2B2B").cgColor
+        tearmsBtn.layer.borderWidth = 3
+        tearmsBtn.round()
+        privacyBtn.round()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func tearmsAction(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Ads", bundle: nil).instantiateViewController(withIdentifier: "AppInfoWebViewController") as! AppInfoWebViewController
+        vc.urlString = "https://tapetz.flycricket.io/privacy.html"
+        vc.viewTitle = "Tearms & Conditions"
+        self.present(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
+    }
+    
+    @IBAction func privacyAction(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Ads", bundle: nil).instantiateViewController(withIdentifier: "AppInfoWebViewController") as! AppInfoWebViewController
+        vc.urlString = "https://tapetz.flycricket.io/privacy.html"
+        vc.viewTitle = "Privacy Policy"
+        self.present(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
+    }
+    
     @IBAction func enterAction(_ sender: Any) {
         enterBtn.startAnimation()
         let qualityOfServiceClass = DispatchQoS.QoSClass.background

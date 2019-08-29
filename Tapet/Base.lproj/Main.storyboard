@@ -43,21 +43,75 @@
                                     <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyf-Rm-CYx"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="4vF-0J-6EX">
+                                <rect key="frame" x="70.5" y="104" width="273.5" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="28u-nA-g9r"/>
+                                    <constraint firstAttribute="width" constant="273.5" id="lJc-8X-m2M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have read the &quot;Tearms and Conditions&quot; and &quot;Privacy and policy&quot;." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-JA-0Ic">
+                                <rect key="frame" x="20" y="688.5" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKT-Jp-liu">
+                                <rect key="frame" x="117" y="528.5" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EIR-Tx-seZ"/>
+                                    <constraint firstAttribute="width" constant="180" id="UR4-0t-CLx"/>
+                                </constraints>
+                                <state key="normal" title="Tearms &amp; Conditions">
+                                    <color key="titleColor" red="1" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tearmsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBA-Aa-9Lv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-FY-MpD">
+                                <rect key="frame" x="117" y="598.5" width="180" height="40"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="LjR-a6-TAl"/>
+                                    <constraint firstAttribute="height" constant="40" id="Qct-YS-HCo"/>
+                                </constraints>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="1" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJW-vF-ijk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.14901960784313725" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7Le-JA-0Ic" firstAttribute="top" secondItem="xzq-FY-MpD" secondAttribute="bottom" constant="50" id="9vm-bw-1F8"/>
+                            <constraint firstItem="xzq-FY-MpD" firstAttribute="top" secondItem="HKT-Jp-liu" secondAttribute="bottom" constant="30" id="Aai-jE-GSz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bJR-sj-FPf" secondAttribute="bottom" constant="40" id="Ege-aR-PZ9"/>
+                            <constraint firstItem="4vF-0J-6EX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="J0l-vW-k21"/>
+                            <constraint firstItem="4vF-0J-6EX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QiN-Yj-EPH"/>
                             <constraint firstItem="bJR-sj-FPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f4V-NU-s29"/>
+                            <constraint firstItem="xzq-FY-MpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g14-E7-RWk"/>
+                            <constraint firstItem="bJR-sj-FPf" firstAttribute="top" secondItem="7Le-JA-0Ic" secondAttribute="bottom" constant="50" id="lxM-YV-gBS"/>
+                            <constraint firstItem="7Le-JA-0Ic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ox3-4M-AW3"/>
+                            <constraint firstItem="HKT-Jp-liu" firstAttribute="centerX" secondItem="xzq-FY-MpD" secondAttribute="centerX" id="wwO-5o-ZhQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Le-JA-0Ic" secondAttribute="trailing" constant="20" id="xW9-rG-a8u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="enterBtn" destination="bJR-sj-FPf" id="2BR-C2-VGQ"/>
+                        <outlet property="privacyBtn" destination="xzq-FY-MpD" id="wSj-Xz-Mjk"/>
+                        <outlet property="tearmsBtn" destination="HKT-Jp-liu" id="v8r-FP-owr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+            <point key="canvasLocation" x="-536.231884057971" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch" width="195" height="147"/>
+    </resources>
 </document>

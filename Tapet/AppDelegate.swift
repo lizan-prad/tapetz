@@ -24,7 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ////
         nav.barTintColor = UIColor.init(hex: "#252627")
+        nav.tintColor = Constants.baseColor
         nav.isTranslucent = false
+        nav.shadowImage = UIImage()
+        nav.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         // Override point for customization after application launch.
         return true
     }
