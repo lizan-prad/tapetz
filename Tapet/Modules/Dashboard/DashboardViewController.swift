@@ -100,6 +100,9 @@ class DashboardViewController: CustomTransitionViewController {
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return CGSize.init(width: self.view.frame.width/3 - 15, height: 280)
+        }
         return CGSize.init(width: self.view.frame.width/2 - 15, height: 280)
     }
     
