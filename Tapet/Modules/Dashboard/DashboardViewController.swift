@@ -50,7 +50,6 @@ class DashboardViewController: CustomTransitionViewController {
     
     @objc func searchTapped() {
         setView(view: self.searchView)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,10 +60,16 @@ class DashboardViewController: CustomTransitionViewController {
     func setView(view: UIView) {
         UIView.transition(with: view, duration: 0.5, options: .showHideTransitionViews, animations: {
             view.isHidden = !view.isHidden
+            if !view.isHidden {
+                self.searchField.becomeFirstResponder()
+            } else {
+                self.searchField.resignFirstResponder()
+            }
         })
     }
     
     func searchWallpapers(text: String) {
+         self.searchField.resignFirstResponder()
         self.startAnimating(type: .ballGridPulse)
         Auth.shared.request(SearchBaseModel.self, urlExt: "search/photos?client_id=\(Constants.clientId)&page=1&per_page=100&query=\(text)", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.stopAnimating()
@@ -78,7 +83,7 @@ class DashboardViewController: CustomTransitionViewController {
     func fetchWallpapers() {
        
         self.startAnimating(type: .ballGridPulse)
-        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=150", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.stopAnimating()
             self.wallpapers = model.data
         }) { (error) in
