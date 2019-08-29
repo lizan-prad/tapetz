@@ -19,3 +19,18 @@ extension UIViewController: NVActivityIndicatorViewable {
         self.stopAnimating(nil)
     }
 }
+
+extension UICollectionViewCell: NVActivityIndicatorViewable {
+    
+    func startAnimating(type: NVActivityIndicatorType) {
+        let vc = UIViewController()
+        vc.view.frame = self.frame
+        self.contentView.addSubview(vc.view)
+        vc.startAnimating(CGSize.init(width: 40, height: 40), message: nil, messageFont: nil, type: type, color: Constants.baseColor, padding: 5, displayTimeThreshold: 10, minimumDisplayTime: 1, backgroundColor: .clear, textColor: nil, fadeInAnimation: nil)
+    }
+//    
+//    func stopAnimating() {
+//        self.stopAnimating(nil)
+//    }
+    
+}

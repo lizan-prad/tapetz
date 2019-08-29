@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="4vF-0J-6EX">
-                                <rect key="frame" x="70.5" y="104" width="273.5" height="279"/>
+                                <rect key="frame" x="70.5" y="94" width="273.5" height="279"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="28u-nA-g9r"/>
                                     <constraint firstAttribute="width" constant="273.5" id="lJc-8X-m2M"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="7Le-JA-0Ic" firstAttribute="top" secondItem="xzq-FY-MpD" secondAttribute="bottom" constant="50" id="9vm-bw-1F8"/>
                             <constraint firstItem="xzq-FY-MpD" firstAttribute="top" secondItem="HKT-Jp-liu" secondAttribute="bottom" constant="30" id="Aai-jE-GSz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bJR-sj-FPf" secondAttribute="bottom" constant="40" id="Ege-aR-PZ9"/>
-                            <constraint firstItem="4vF-0J-6EX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="J0l-vW-k21"/>
+                            <constraint firstItem="4vF-0J-6EX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="J0l-vW-k21"/>
                             <constraint firstItem="4vF-0J-6EX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QiN-Yj-EPH"/>
                             <constraint firstItem="AQv-Yu-Edb" firstAttribute="centerY" secondItem="7Le-JA-0Ic" secondAttribute="centerY" id="cIA-KL-jQP"/>
                             <constraint firstItem="bJR-sj-FPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f4V-NU-s29"/>

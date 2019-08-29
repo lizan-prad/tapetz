@@ -96,12 +96,18 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bYZ-xz-y3W">
+                                                            <rect key="frame" x="93" y="-10" width="20" height="20"/>
+                                                            <color key="color" red="1" green="0.37647058820000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
                                                     <constraint firstItem="c7w-nv-iff" firstAttribute="leading" secondItem="xvX-6s-et6" secondAttribute="leading" constant="12" id="9CW-IM-nhE"/>
                                                     <constraint firstItem="zLM-ma-4cz" firstAttribute="leading" secondItem="xvX-6s-et6" secondAttribute="leading" id="9tu-lt-YoO"/>
+                                                    <constraint firstItem="bYZ-xz-y3W" firstAttribute="centerX" secondItem="xvX-6s-et6" secondAttribute="centerX" id="DBl-yw-L59"/>
                                                     <constraint firstItem="OIV-mu-b13" firstAttribute="centerY" secondItem="c7w-nv-iff" secondAttribute="centerY" id="Moi-6o-Hx8"/>
+                                                    <constraint firstItem="bYZ-xz-y3W" firstAttribute="centerY" secondItem="xvX-6s-et6" secondAttribute="centerY" id="NHL-1k-ClY"/>
                                                     <constraint firstAttribute="bottom" secondItem="zLM-ma-4cz" secondAttribute="bottom" id="UKh-lA-ocO"/>
                                                     <constraint firstAttribute="bottom" secondItem="c7w-nv-iff" secondAttribute="bottom" constant="20" id="gr0-uJ-ak3"/>
                                                     <constraint firstItem="a1J-bl-y0q" firstAttribute="leading" secondItem="c7w-nv-iff" secondAttribute="trailing" constant="5" id="iY2-z5-u7W"/>
@@ -112,6 +118,7 @@
                                                     <constraint firstItem="a1J-bl-y0q" firstAttribute="centerY" secondItem="c7w-nv-iff" secondAttribute="centerY" id="zaw-Sn-B0D"/>
                                                 </constraints>
                                                 <connections>
+                                                    <outlet property="activityIndicator" destination="bYZ-xz-y3W" id="XYN-eI-BRb"/>
                                                     <outlet property="imageView" destination="zLM-ma-4cz" id="7SH-Ha-7tb"/>
                                                     <outlet property="likesBackView" destination="OIV-mu-b13" id="hg9-hK-TR7"/>
                                                     <outlet property="likesLabel" destination="a1J-bl-y0q" id="Hdj-KJ-drz"/>

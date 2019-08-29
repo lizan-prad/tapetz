@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          enterBtn.isEnabled = agreed
-        tearmsBtn.layer.borderColor = UIColor.init(hex: "#2B2B2B").cgColor
+        tearmsBtn.layer.borderColor = Constants.baseColor.cgColor
         tearmsBtn.layer.borderWidth = 3
         tearmsBtn.round()
         privacyBtn.round()
