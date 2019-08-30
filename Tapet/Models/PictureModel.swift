@@ -8,6 +8,8 @@
 
 import Foundation
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
 class BasePictureModel<T: Mappable>: Mappable {
     
@@ -51,6 +53,7 @@ class PictureModel: Mappable {
     var liked_by_user : Bool?
     var current_user_collections : [String]?
     var user : User?
+    var imageData: Data?
     var sponsorship : Sponsorship?
     
     required init?(map: Map) {
@@ -75,6 +78,26 @@ class PictureModel: Mappable {
         current_user_collections <- map["current_user_collections"]
         user <- map["user"]
         sponsorship <- map["sponsorship"]
+    }
+    
+    func toRealm() -> PictureRealmModel {
+        let model = PictureRealmModel()
+        model.id = self.id ?? ""
+        model.image = self.imageData
+        model.likes = self.likes ?? 0
+        return model
+    }
+    
+}
+
+class PictureRealmModel: Object {
+    
+    @objc dynamic var id: String = ""
+    @objc dynamic var likes: Int = 0
+    @objc dynamic var image: Data?
+    
+    override open class func primaryKey() -> String? {
+        return "id"
     }
     
 }

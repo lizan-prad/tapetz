@@ -11,6 +11,7 @@ import SDWebImage
 
 class ImageDataViewController: UIViewController {
 
+    @IBOutlet weak var favView: UIImageView!
     @IBOutlet weak var saveView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var userProfileView: UIImageView!
@@ -40,6 +41,9 @@ class ImageDataViewController: UIViewController {
         userProfileView.round()
         userProfileView.isUserInteractionEnabled = true
         userProfileView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(viewUserProfile)))
+        if self.getAllIds().contains(model?.id ?? "") {
+            self.favView.image = UIImage.init(named: "heart")
+        }
     }
     
     @objc func viewUserProfile() {

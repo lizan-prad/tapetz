@@ -242,6 +242,7 @@
                     <connections>
                         <outlet property="bottomView" destination="pFG-d9-dNp" id="IQk-6P-hve"/>
                         <outlet property="downloadView" destination="HIm-kb-ty4" id="WgI-ZZ-Zrk"/>
+                        <outlet property="favView" destination="LmL-TB-HMm" id="WzF-Vy-M4e"/>
                         <outlet property="imageColor" destination="1Wg-qc-9BK" id="Tcm-iP-qu5"/>
                         <outlet property="imageDesc" destination="ueX-LQ-jqv" id="mg1-CX-z7L"/>
                         <outlet property="imageDimenssion" destination="Wlo-pe-uCu" id="vO0-5d-LOb"/>
@@ -553,7 +554,7 @@
     <resources>
         <image name="back" width="32" height="32"/>
         <image name="close" width="128" height="128"/>
-        <image name="fav" width="128" height="128"/>
+        <image name="fav" width="22" height="22"/>
         <image name="insta" width="64" height="64"/>
         <image name="save" width="64" height="64"/>
         <image name="tick" width="128" height="128"/>

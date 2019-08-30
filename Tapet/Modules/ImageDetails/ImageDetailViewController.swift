@@ -26,7 +26,12 @@ class ImageDetailViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
-            
+            if self.getAllIds().contains(self.picture?.id ?? "" ) {
+            self.picture?.imageData = image?.sd_imageData()
+            if let model = self.picture?.toRealm() {
+                self.save(models: [model])
+            }
+            }
         }
          wallpaperImage.isUserInteractionEnabled = true
         let swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(handleGesture(gesture:)))
@@ -87,5 +92,12 @@ extension UIView {
     
     func round() {
         self.layer.cornerRadius = self.frame.height/2
+    }
+}
+extension UIViewController: RealmPersistenceType {
+    
+    func getAllIds() -> [String] {
+        let datas: [PictureRealmModel] = self.fetch()
+        return datas.map{$0.id}
     }
 }

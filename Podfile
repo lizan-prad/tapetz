@@ -15,6 +15,9 @@ target 'Tapet' do
   pod 'NVActivityIndicatorView'
   pod 'Hero'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'collection-view-layouts/FlickrLayout'
+  pod 'collection-view-layouts/FacebookLayout'
+  pod 'Persei', '~> 3.0'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

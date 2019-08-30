@@ -10,17 +10,39 @@ import UIKit
 import Alamofire
 import TransitionButton
 import Hero
+import collection_view_layouts
+import Persei
 
-class DashboardViewController: CustomTransitionViewController {
+class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
+    
+    func cellSize(indexPath: IndexPath) -> CGSize {
+        return cellsSizes[indexPath.row]
+    }
+    
+    private var cellsSizes = [CGSize]()
 
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let categories: [(String,UIImage?)] = [("All",UIImage.init(named: "lo")), ("Animals",UIImage.init(named: "animal")), ("Girls",UIImage.init(named: "Girls")), ("Nature",UIImage.init(named: "nature")), ("City",UIImage.init(named: "City")), ("Fashion",UIImage.init(named: "fashion")), ("Underwater",UIImage.init(named: "underwater"))]
+    
+    var items: [MenuItem]? {
+        return categories.map {
+            MenuItem(title: $0.0,image: $0.1 ?? UIImage())
+        }
+    }
+    
     var wallpapers: [PictureModel]? {
         didSet {
-            collectionView.reloadData()
+            let range = 50...150
+            cellsSizes.removeAll()
+            self.cellsSizes = wallpapers?.map({ (_) -> CGSize in
+                let height = CGFloat(Int.random(in: range))
+                return CGSize(width: 0.1, height: height)
+            }) ?? []
+            self.setupLayoput()
         }
     }
     
@@ -34,10 +56,36 @@ class DashboardViewController: CustomTransitionViewController {
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "search"), style: .plain, target: self, action: #selector(searchTapped))
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "fav"), style: .plain, target: self, action: #selector(favTapped))
         searchField.round()
         searchField.addTarget(self, action: #selector(didChangeText(sender:)), for: .editingChanged)
         searchField.attributedPlaceholder = NSAttributedString.init(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
+        setupMenu()
+        
         fetchWallpapers()
+    }
+    
+    @objc func favTapped() {
+        let vc = UIStoryboard.init(name: "Favourites", bundle: nil).instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setupMenu() {
+        let menu = MenuView()
+        menu.items = self.items ?? []
+        menu.delegate = self
+        menu.backgroundColor = UIColor.init(hex: "#252627")
+        collectionView.addSubview(menu)
+    }
+    
+    func setupLayoput() {
+        let layout: BaseLayout = FlickrLayout()
+        layout.delegate = self
+        layout.contentPadding = ItemsPadding(horizontal: 10, vertical: 10)
+        layout.cellsPadding = ItemsPadding(horizontal: 8, vertical: 8)
+        collectionView.collectionViewLayout = layout
+        collectionView.reloadData()
     }
     
     @objc func didChangeText(sender: UITextField) {
@@ -97,14 +145,27 @@ class DashboardViewController: CustomTransitionViewController {
     }
 }
 
-extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DashboardViewController: MenuViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return CGSize.init(width: self.view.frame.width/3 - 15, height: 280)
+    func menu(_ menu: MenuView, didSelectItemAt index: Int) {
+      // alter mode of dataSource
+        if index == 0 {
+            self.fetchWallpapers()
+            return
         }
-        return CGSize.init(width: self.view.frame.width/2 - 15, height: 280)
+        self.searchWallpapers(text: self.categories[index].0)
+        
     }
+}
+
+extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            return CGSize.init(width: self.view.frame.width/3 - 15, height: 280)
+//        }
+//        return CGSize.init(width: self.view.frame.width/2 - 15, height: 280)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return wallpapers?.count ?? 0

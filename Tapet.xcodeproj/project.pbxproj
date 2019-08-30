@@ -40,6 +40,9 @@
 		A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C12316894E007D4E14 /* SavedViewController.swift */; };
 		A00EE9C42316A85A007D4E14 /* AdMobDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */; };
 		A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */; };
+		A0BEDDA023192B7900A3CAB8 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */; };
+		A0BEDDA223192C0A00A3CAB8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */; };
+		A0BEDDA423192C2B00A3CAB8 /* FavouritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDDA323192C2B00A3CAB8 /* FavouritesCell.swift */; };
 		A54605CD032015C6D4857ADA /* Pods_TapetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */; };
 		D9A94A2A85EE9496D62D3ABF /* Pods_Tapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6F0EB01B0F9E02C55E4835 /* Pods_Tapet.framework */; };
 		FAE7E30300DBC39848CED654 /* Pods_TapetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E11137FA4B4B9644022EC7 /* Pods_TapetTests.framework */; };
@@ -108,6 +111,9 @@
 		A00EE9C12316894E007D4E14 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDelegate.swift; sourceTree = "<group>"; };
 		A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
+		A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A0BEDDA323192C2B00A3CAB8 /* FavouritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCell.swift; sourceTree = "<group>"; };
 		A61785B883AD91A175CBB8AF /* Pods-TapetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapetTests.debug.xcconfig"; path = "Target Support Files/Pods-TapetTests/Pods-TapetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA02C87A0BBF0A8464A12D /* Pods_TapetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDFE1992D3E79EB013ED926 /* Pods-Tapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapet.release.xcconfig"; path = "Target Support Files/Pods-Tapet/Pods-Tapet.release.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 		A00EE9AF23164E5B007D4E14 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A0BEDD9E23192B6D00A3CAB8 /* Favourites */,
 				7B1E1DDA23171285004A35CA /* WebView */,
 				A00EE9B723166563007D4E14 /* ImageDetails */,
 				A00EE9B623166556007D4E14 /* Dashboard */,
@@ -291,6 +298,16 @@
 				A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */,
 			);
 			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		A0BEDD9E23192B6D00A3CAB8 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */,
+				A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */,
+				A0BEDDA323192C2B00A3CAB8 /* FavouritesCell.swift */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +421,7 @@
 				7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */,
 				7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */,
 				7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */,
+				A0BEDDA023192B7900A3CAB8 /* Favourites.storyboard in Resources */,
 				7B1E1DE123171285004A35CA /* Ads.storyboard in Resources */,
 				A00EE9B523164EAB007D4E14 /* Dashboard.storyboard in Resources */,
 				A00EE9B923166578007D4E14 /* ImageDetails.storyboard in Resources */,
@@ -501,9 +519,44 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Persei/Persei.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/collection-view-layouts/collection_view_layouts.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Persei.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/collection_view_layouts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,7 +573,9 @@
 				A00EE9A1231643B5007D4E14 /* UIViewControllerExtensions.swift in Sources */,
 				A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */,
 				A00EE9A0231643B5007D4E14 /* PersestenceType.swift in Sources */,
+				A0BEDDA423192C2B00A3CAB8 /* FavouritesCell.swift in Sources */,
 				7B1E1DE223171285004A35CA /* AdsWebViewController.swift in Sources */,
+				A0BEDDA223192C0A00A3CAB8 /* FavouritesViewController.swift in Sources */,
 				7BB34EC52315A96800DAD5F5 /* PictureModel.swift in Sources */,
 				A00EE9AD2316452D007D4E14 /* Sponsor.swift in Sources */,
 				A00EE9AC2316452D007D4E14 /* Urls.swift in Sources */,

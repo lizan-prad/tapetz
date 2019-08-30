@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (4.8.2)
+  - collection-view-layouts/Core (0.2.2)
+  - collection-view-layouts/FacebookLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/FlickrLayout (0.2.2):
+    - collection-view-layouts/Core
   - Google-Mobile-Ads-SDK (7.49.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.1.1):
@@ -38,6 +43,7 @@ PODS:
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
+  - Persei (3.1.1)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
   - Realm/Headers (3.17.3)
@@ -51,11 +57,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - collection-view-layouts/FacebookLayout
+  - collection-view-layouts/FlickrLayout
   - Google-Mobile-Ads-SDK
   - Hero
   - MBProgressHUD
   - NVActivityIndicatorView
   - "ObjectMapper+Realm"
+  - Persei (~> 3.0)
   - SDWebImage (~> 4.0)
   - SwiftyJSON
   - TransitionButton
@@ -63,6 +72,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - collection-view-layouts
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -72,6 +82,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - ObjectMapper
     - "ObjectMapper+Realm"
+    - Persei
     - Realm
     - RealmSwift
     - SDWebImage
@@ -80,6 +91,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
   Google-Mobile-Ads-SDK: df315e371b29cf935f7ea872e7bdec39462a100e
   GoogleAppMeasurement: 86a82f0e1f20b8eedf8e20326530138fd71409de
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
@@ -89,12 +101,13 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  Persei: 6d36b54e40eccd437211548d3f897269c85d3a13
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 2bb06900c4b34c83ced3ae65aa3ad324c092b1f9
+PODFILE CHECKSUM: 30e36cea27567dc53a3181e80186c1877b8cbdcd
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.6.1
