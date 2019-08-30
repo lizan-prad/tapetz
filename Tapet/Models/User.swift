@@ -13,8 +13,10 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
-struct User : Mappable {
+class User : Mappable {
 	var id : String?
 	var updated_at : String?
 	var username : String?
@@ -32,12 +34,16 @@ struct User : Mappable {
 	var total_likes : Int?
 	var total_photos : Int?
 	var accepted_tos : Bool?
+    
+    init() {
+        
+    }
 
-	init?(map: Map) {
+	required init?(map: Map) {
 
 	}
 
-	mutating func mapping(map: Map) {
+    func mapping(map: Map) {
 
 		id <- map["id"]
 		updated_at <- map["updated_at"]
@@ -57,5 +63,66 @@ struct User : Mappable {
 		total_photos <- map["total_photos"]
 		accepted_tos <- map["accepted_tos"]
 	}
+    
+    func toRealm() -> ImageRealmUser {
+        let model = ImageRealmUser()
+        model.id = self.id ?? ""
+        model.username = self.username ?? ""
+        model.name = self.name ?? ""
+        model.first_name = self.first_name ?? ""
+        model.last_name = self.last_name ?? ""
+        model.twitter_username = self.twitter_username ?? ""
+        model.portfolio_url = self.portfolio_url ?? ""
+        model.bio = self.bio ?? ""
+        model.location = self.location ?? ""
+        model.profile_image = self.profile_image?.toRealm()
+        model.instagram_username = self.instagram_username ?? ""
+        model.total_likes = self.total_likes ?? 0
+        model.total_photos = self.total_photos ?? 0
+        model.total_collections = self.total_collections ?? 0
+        return model
+    }
+
+}
+
+class ImageRealmUser: Object {
+    
+    @objc dynamic var id : String = ""
+    @objc dynamic var username : String = ""
+    @objc dynamic var name : String = ""
+    @objc dynamic var first_name : String = ""
+    @objc dynamic var last_name : String = ""
+    @objc dynamic var twitter_username : String = ""
+    @objc dynamic var portfolio_url : String = ""
+    @objc dynamic var bio : String = ""
+    @objc dynamic var location : String = ""
+    var profile_image : UserProfileImageRealm?
+    @objc dynamic var instagram_username : String = ""
+    @objc dynamic var total_collections : Int = 0
+    @objc dynamic var total_likes : Int = 0
+    @objc dynamic var total_photos : Int = 0
+    
+    override open class func primaryKey() -> String? {
+        return "id"
+    }
+    
+    func toNormal() -> User {
+        let model = User()
+        model.id = self.id
+        model.username = self.username
+        model.name = self.name
+        model.first_name = self.first_name
+        model.last_name = self.last_name
+        model.twitter_username = self.twitter_username
+        model.portfolio_url = self.portfolio_url
+        model.bio = self.bio
+        model.location = self.location
+        model.profile_image = self.profile_image?.toNormal()
+        model.instagram_username = self.instagram_username
+        model.total_likes = self.total_likes
+        model.total_photos = self.total_photos
+        model.total_collections = self.total_collections 
+        return model
+    }
 
 }

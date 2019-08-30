@@ -14,6 +14,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
+
 struct Links : Mappable {
 	var html : String?
 	var photos : String?
@@ -36,3 +37,5 @@ struct Links : Mappable {
 	}
 
 }
+
+

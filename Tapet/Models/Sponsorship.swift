@@ -13,6 +13,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
 struct Sponsorship : Mappable {
 	var impressions_id : String?
@@ -22,6 +24,10 @@ struct Sponsorship : Mappable {
 	init?(map: Map) {
 
 	}
+    
+    init() {
+        
+    }
 
 	mutating func mapping(map: Map) {
 
@@ -29,5 +35,28 @@ struct Sponsorship : Mappable {
 		tagline <- map["tagline"]
 		sponsor <- map["sponsor"]
 	}
+    
+    func toRealm() -> SponsorShipRealm{
+        let model = SponsorShipRealm()
+        model.impressions_id = self.impressions_id ?? ""
+        model.sponsor = self.sponsor?.toRealm()
+        return model
+    }
 
+}
+
+class SponsorShipRealm: Object {
+    var impressions_id : String?
+    var sponsor : SponserRealm?
+    
+    override open class func primaryKey() -> String? {
+        return "impressions_id"
+    }
+    
+    func toNormal() -> Sponsorship{
+        var model = Sponsorship()
+        model.impressions_id = self.impressions_id ?? ""
+        model.sponsor = self.sponsor?.toNormal()
+        return model
+    }
 }

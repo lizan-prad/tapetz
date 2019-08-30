@@ -13,6 +13,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
 struct Urls : Mappable {
 	var raw : String?
@@ -21,6 +23,10 @@ struct Urls : Mappable {
 	var small : String?
 	var thumb : String?
 
+    init() {
+        
+    }
+    
 	init?(map: Map) {
 
 	}
@@ -33,5 +39,33 @@ struct Urls : Mappable {
 		small <- map["small"]
 		thumb <- map["thumb"]
 	}
+    
+    func toRealm() -> UrlsRealm {
+        let model = UrlsRealm()
+        model.raw = self.raw ?? ""
+        model.full = self.full ?? ""
+        model.regular = self.regular ?? ""
+        model.small = self.small ?? ""
+        model.thumb = self.thumb ?? ""
+        return model
+    }
+}
 
+class UrlsRealm: Object {
+    
+    @objc dynamic var raw : String = ""
+    @objc dynamic var full : String = ""
+    @objc dynamic var regular : String = ""
+    @objc dynamic var small : String = ""
+    @objc dynamic var thumb : String = ""
+    
+    func toNormal() -> Urls {
+        var model = Urls()
+        model.raw = self.raw
+        model.full = self.full
+        model.regular = self.regular
+        model.small = self.small
+        model.thumb = self.thumb
+        return model
+    }
 }

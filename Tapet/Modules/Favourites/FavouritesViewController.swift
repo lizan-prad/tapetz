@@ -80,10 +80,10 @@ extension FavouritesViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DashboardCell
-        cell.imageView.hero.id = cell.model?.id
+        let cell = collectionView.cellForItem(at: indexPath) as! FavouritesCell
+        cell.imageView.hero.id = cell.realmModel?.id
         let vc = UIStoryboard.init(name: "ImageDetails", bundle: nil).instantiateViewController(withIdentifier: "ImageDetailViewController") as! ImageDetailViewController
-        vc.picture = cell.model
+        vc.picture = cell.realmModel?.toNormal()
         vc.image = cell.imageView.image
         let nav = UINavigationController.init(rootViewController: vc)
         nav.hero.isEnabled = true

@@ -65,7 +65,7 @@ class ImageDataViewController: UIViewController {
         }
         userName.text = model?.user?.name
         imageDimenssion.text = "\(model?.width ?? 0) x \(model?.height ?? 0)"
-        imageDesc.text = model?.alt_description ?? model?.description
+        imageDesc.text = model?.alt_description ?? model?.descriptions
         imageColor.text = model?.color
         sponsir.text = "Sponsored by \(model?.sponsorship?.sponsor?.name ?? "")"
     }

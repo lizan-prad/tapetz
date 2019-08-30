@@ -13,6 +13,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
 struct Profile_image : Mappable {
 	var small : String?
@@ -22,6 +24,10 @@ struct Profile_image : Mappable {
 	init?(map: Map) {
 
 	}
+    
+    init() {
+        
+    }
 
 	mutating func mapping(map: Map) {
 
@@ -29,5 +35,28 @@ struct Profile_image : Mappable {
 		medium <- map["medium"]
 		large <- map["large"]
 	}
+    
+    func toRealm() -> UserProfileImageRealm {
+        let model = UserProfileImageRealm()
+        model.small = self.small ?? ""
+        model.medium = self.medium ?? ""
+        model.large = self.large ?? ""
+        return model
+    }
+}
 
+class UserProfileImageRealm: Object {
+    
+    @objc dynamic var id: String = ""
+    @objc dynamic var small : String = ""
+    @objc dynamic var medium : String = ""
+    @objc dynamic var large : String = ""
+    
+    func toNormal() -> Profile_image {
+        var model = Profile_image()
+        model.small = self.small
+        model.medium = self.medium
+        model.large = self.large
+        return model
+    }
 }

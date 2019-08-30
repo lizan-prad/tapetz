@@ -44,7 +44,7 @@ class PictureModel: Mappable {
     var width : Int?
     var height : Int?
     var color : String?
-    var description : String?
+    var descriptions : String?
     var alt_description : String?
     var urls : Urls?
     var links : Links?
@@ -60,6 +60,10 @@ class PictureModel: Mappable {
         
     }
     
+    init() {
+        
+    }
+    
     func mapping(map: Map) {
         
         id <- map["id"]
@@ -68,7 +72,7 @@ class PictureModel: Mappable {
         width <- map["width"]
         height <- map["height"]
         color <- map["color"]
-        description <- map["description"]
+        descriptions <- map["description"]
         alt_description <- map["alt_description"]
         urls <- map["urls"]
         links <- map["links"]
@@ -85,6 +89,15 @@ class PictureModel: Mappable {
         model.id = self.id ?? ""
         model.image = self.imageData
         model.likes = self.likes ?? 0
+        model.height = self.height ?? 0
+        model.width = self.width ?? 0
+        model.color = self.color ?? ""
+        model.descriptions = self.descriptions ?? ""
+        model.alt_description = self.alt_description ?? ""
+        model.urls = self.urls?.toRealm()
+        model.user = self.user?.toRealm()
+        model.image = self.imageData
+        model.sponsorship = self.sponsorship?.toRealm()
         return model
     }
     
@@ -95,9 +108,33 @@ class PictureRealmModel: Object {
     @objc dynamic var id: String = ""
     @objc dynamic var likes: Int = 0
     @objc dynamic var image: Data?
+    @objc dynamic var width : Int = 0
+    @objc dynamic var height : Int = 0
+    @objc dynamic var color : String = ""
+    @objc dynamic var descriptions : String = ""
+    @objc dynamic var alt_description : String = ""
+    var urls : UrlsRealm?
+    var user : ImageRealmUser?
+    var sponsorship : SponsorShipRealm?
     
     override open class func primaryKey() -> String? {
         return "id"
+    }
+    
+    func toNormal() -> PictureModel {
+        let model = PictureModel()
+        model.id = self.id
+        model.imageData = self.image
+        model.likes = self.likes
+        model.height = self.height
+        model.width = self.width
+        model.color = self.color
+        model.descriptions = self.descriptions
+        model.alt_description = self.alt_description
+        model.urls = self.urls?.toNormal()
+        model.user = self.user?.toNormal()
+        model.sponsorship = self.sponsorship?.toNormal()
+        return model
     }
     
 }
