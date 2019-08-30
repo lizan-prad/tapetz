@@ -26,7 +26,7 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let categories: [(String,UIImage?)] = [("All",UIImage.init(named: "lo")), ("Animals",UIImage.init(named: "animal")), ("Girls",UIImage.init(named: "Girls")), ("Nature",UIImage.init(named: "nature")), ("City",UIImage.init(named: "City")), ("Fashion",UIImage.init(named: "fashion")), ("Underwater",UIImage.init(named: "underwater"))]
+    let categories: [(String,UIImage?)] = [("All",UIImage.init(named: "lo")), ("Animals",UIImage.init(named: "animal")), ("Cute",UIImage.init(named: "cute")), ("Girls",UIImage.init(named: "Girls")), ("Nature",UIImage.init(named: "nature")), ("City",UIImage.init(named: "City")), ("Fashion",UIImage.init(named: "fashion")), ("Underwater",UIImage.init(named: "underwater"))]
     
     var items: [MenuItem]? {
         return categories.map {
