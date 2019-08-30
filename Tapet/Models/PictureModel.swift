@@ -75,12 +75,14 @@ class PictureModel: Mappable {
         descriptions <- map["description"]
         alt_description <- map["alt_description"]
         urls <- map["urls"]
+        urls?.id = self.id
         links <- map["links"]
         categories <- map["categories"]
         likes <- map["likes"]
         liked_by_user <- map["liked_by_user"]
         current_user_collections <- map["current_user_collections"]
         user <- map["user"]
+        user?.profile_image?.id = self.id
         sponsorship <- map["sponsorship"]
     }
     
@@ -94,10 +96,10 @@ class PictureModel: Mappable {
         model.color = self.color ?? ""
         model.descriptions = self.descriptions ?? ""
         model.alt_description = self.alt_description ?? ""
-        model.urls = self.urls?.toRealm()
-        model.user = self.user?.toRealm()
+//        model.urls = self.urls?.toRealm()
+//        model.user = self.user?.toRealm()
         model.image = self.imageData
-        model.sponsorship = self.sponsorship?.toRealm()
+//        model.sponsorship = self.sponsorship?.toRealm()
         return model
     }
     
@@ -113,9 +115,9 @@ class PictureRealmModel: Object {
     @objc dynamic var color : String = ""
     @objc dynamic var descriptions : String = ""
     @objc dynamic var alt_description : String = ""
-    var urls : UrlsRealm?
-    var user : ImageRealmUser?
-    var sponsorship : SponsorShipRealm?
+//    var urls : UrlsRealm?
+//    var user : ImageRealmUser?
+//    var sponsorship : SponsorShipRealm?
     
     override open class func primaryKey() -> String? {
         return "id"
@@ -131,9 +133,9 @@ class PictureRealmModel: Object {
         model.color = self.color
         model.descriptions = self.descriptions
         model.alt_description = self.alt_description
-        model.urls = self.urls?.toNormal()
-        model.user = self.user?.toNormal()
-        model.sponsorship = self.sponsorship?.toNormal()
+//        model.urls = self.urls?.toNormal()
+//        model.user = self.user?.toNormal()
+//        model.sponsorship = self.sponsorship?.toNormal()
         return model
     }
     

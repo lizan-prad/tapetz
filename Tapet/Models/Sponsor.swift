@@ -63,29 +63,29 @@ struct Sponsor : Mappable {
 		total_photos <- map["total_photos"]
 		accepted_tos <- map["accepted_tos"]
 	}
-    
-    func toRealm() -> SponserRealm {
-        let model = SponserRealm()
-        model.id = self.id ?? ""
-        model.name = self.name ?? ""
-        return model
-    }
+//    
+//    func toRealm() -> SponserRealm {
+//        let model = SponserRealm()
+//        model.id = self.id ?? ""
+//        model.name = self.name ?? ""
+//        return model
+//    }
 
 }
-
-class SponserRealm: Object {
-    
-    @objc dynamic var id: String = ""
-    @objc dynamic var name: String = ""
-    
-    override open class func primaryKey() -> String? {
-        return "id"
-    }
-    
-    func toNormal() -> Sponsor {
-        var model = Sponsor()
-        model.id = self.id
-        model.name = self.name 
-        return model
-    }
-}
+//
+//class SponserRealm: Object {
+//
+//    @objc dynamic var id: String = ""
+//    @objc dynamic var name: String = ""
+//
+//    override open class func primaryKey() -> String? {
+//        return "id"
+//    }
+//
+//    func toNormal() -> Sponsor {
+//        var model = Sponsor()
+//        model.id = self.id
+//        model.name = self.name
+//        return model
+//    }
+//}

@@ -17,6 +17,7 @@ import ObjectMapper_Realm
 import RealmSwift
 
 struct Urls : Mappable {
+    var id: String?
 	var raw : String?
 	var full : String?
 	var regular : String?
@@ -39,33 +40,38 @@ struct Urls : Mappable {
 		small <- map["small"]
 		thumb <- map["thumb"]
 	}
-    
-    func toRealm() -> UrlsRealm {
-        let model = UrlsRealm()
-        model.raw = self.raw ?? ""
-        model.full = self.full ?? ""
-        model.regular = self.regular ?? ""
-        model.small = self.small ?? ""
-        model.thumb = self.thumb ?? ""
-        return model
-    }
+//    
+//    func toRealm() -> UrlsRealm {
+//        let model = UrlsRealm()
+//        model.id = self.id ?? ""
+//        model.raw = self.raw ?? ""
+//        model.full = self.full ?? ""
+//        model.regular = self.regular ?? ""
+//        model.small = self.small ?? ""
+//        model.thumb = self.thumb ?? ""
+//        return model
+//    }
 }
-
-class UrlsRealm: Object {
-    
-    @objc dynamic var raw : String = ""
-    @objc dynamic var full : String = ""
-    @objc dynamic var regular : String = ""
-    @objc dynamic var small : String = ""
-    @objc dynamic var thumb : String = ""
-    
-    func toNormal() -> Urls {
-        var model = Urls()
-        model.raw = self.raw
-        model.full = self.full
-        model.regular = self.regular
-        model.small = self.small
-        model.thumb = self.thumb
-        return model
-    }
-}
+//
+//class UrlsRealm: Object {
+//    @objc dynamic var id : String = ""
+//    @objc dynamic var raw : String = ""
+//    @objc dynamic var full : String = ""
+//    @objc dynamic var regular : String = ""
+//    @objc dynamic var small : String = ""
+//    @objc dynamic var thumb : String = ""
+//
+//    override open class func primaryKey() -> String? {
+//        return "id"
+//    }
+//
+//    func toNormal() -> Urls {
+//        var model = Urls()
+//        model.raw = self.raw
+//        model.full = self.full
+//        model.regular = self.regular
+//        model.small = self.small
+//        model.thumb = self.thumb
+//        return model
+//    }
+//}

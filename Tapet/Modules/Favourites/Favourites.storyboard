@@ -107,8 +107,51 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="135.9375"/>
         </scene>
+        <!--Favourite Image View Controller-->
+        <scene sceneID="5hg-ea-WPx">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteImageViewController" id="S6j-i1-QHi" customClass="FavouriteImageViewController" customModule="Tapet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Md5-fp-FXf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ic-jF-UcG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD4-fQ-EJU">
+                                <rect key="frame" x="20" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3lz-hc-NWn"/>
+                                    <constraint firstAttribute="width" constant="40" id="Kme-0c-jRx"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="S6j-i1-QHi" eventType="touchUpInside" id="wkI-q7-mIa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686269999999" green="0.1960784314" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tD4-fQ-EJU" firstAttribute="top" secondItem="o7p-8k-ejo" secondAttribute="top" constant="20" id="B4u-dd-PzZ"/>
+                            <constraint firstAttribute="bottom" secondItem="7Ic-jF-UcG" secondAttribute="bottom" id="KbI-LO-fOb"/>
+                            <constraint firstItem="tD4-fQ-EJU" firstAttribute="leading" secondItem="o7p-8k-ejo" secondAttribute="leading" constant="20" id="Oed-hd-25l"/>
+                            <constraint firstItem="o7p-8k-ejo" firstAttribute="trailing" secondItem="7Ic-jF-UcG" secondAttribute="trailing" id="QLV-pL-6kr"/>
+                            <constraint firstItem="7Ic-jF-UcG" firstAttribute="top" secondItem="Md5-fp-FXf" secondAttribute="top" id="QSP-ez-tgk"/>
+                            <constraint firstItem="7Ic-jF-UcG" firstAttribute="leading" secondItem="o7p-8k-ejo" secondAttribute="leading" id="nUY-v1-tqg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o7p-8k-ejo"/>
+                    </view>
+                    <connections>
+                        <outlet property="wallpaperImage" destination="7Ic-jF-UcG" id="7KQ-Xc-HUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDR-nm-frc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120.28985507246378" y="68.973214285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="back" width="32" height="32"/>
         <image name="heart" width="24" height="24"/>
     </resources>
 </document>

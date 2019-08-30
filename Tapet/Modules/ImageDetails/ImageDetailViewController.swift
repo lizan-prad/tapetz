@@ -10,6 +10,7 @@ import UIKit
 import Hero
 import SDWebImage
 import GoogleMobileAds
+import Alamofire
 
 class ImageDetailViewController: UIViewController {
     
@@ -25,6 +26,8 @@ class ImageDetailViewController: UIViewController {
         self.hero.isEnabled = true
         self.navigationController?.navigationBar.isHidden = true
         
+       
+        
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
             if self.getAllIds().contains(self.picture?.id ?? "" ) {
             self.picture?.imageData = image?.sd_imageData()
@@ -33,6 +36,7 @@ class ImageDetailViewController: UIViewController {
             }
             }
         }
+        
          wallpaperImage.isUserInteractionEnabled = true
         let swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(handleGesture(gesture:)))
         swipeGesture.direction = .down
