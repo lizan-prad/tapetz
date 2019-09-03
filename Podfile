@@ -18,6 +18,7 @@ target 'Tapet' do
   pod 'collection-view-layouts/FlickrLayout'
   pod 'collection-view-layouts/FacebookLayout'
   pod 'Persei', '~> 3.0'
+  pod 'FacebookSDK' 
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

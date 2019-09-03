@@ -63,10 +63,10 @@ class ImageDataViewController: UIViewController {
         likes.text = "\(model?.likes ?? 0)"
         userProfileView.sd_setImage(with: URL.init(string: model?.user?.profile_image?.medium ?? ""), placeholderImage: UIImage.init(named: "3336938-64"), options: .refreshCached) { (_, _, _, _) in
         }
-        userName.text = model?.user?.name
+        userName.text = "\(model?.user?.name ?? "")"
         imageDimenssion.text = "\(model?.width ?? 0) x \(model?.height ?? 0)"
         imageDesc.text = model?.alt_description ?? model?.descriptions
-        imageColor.text = model?.color
+        imageColor.text = "Unsplash"
         sponsir.text = "Sponsored by \(model?.sponsorship?.sponsor?.name ?? "")"
     }
     

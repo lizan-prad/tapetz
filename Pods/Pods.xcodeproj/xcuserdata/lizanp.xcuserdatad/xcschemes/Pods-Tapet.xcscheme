@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4535677621512329E78D194EF86C46E"
+               BlueprintIdentifier = "EB881979F3CF5F6D7FDE313EF28C716E"
                BuildableName = "Pods_Tapet.framework"
                BlueprintName = "Pods-Tapet"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4535677621512329E78D194EF86C46E"
+            BlueprintIdentifier = "EB881979F3CF5F6D7FDE313EF28C716E"
             BuildableName = "Pods_Tapet.framework"
             BlueprintName = "Pods-Tapet"
             ReferencedContainer = "container:Pods.xcodeproj">
