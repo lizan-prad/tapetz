@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = UINavigationBar.appearance()
         
         // GOOGLE ADS SETUP
-        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         UIApplication.shared.statusBarStyle = .lightContent
         ////
@@ -44,6 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         return true
+    }
+    
+   
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = ApplicationDelegate.shared.application(app, open: url, options: options)
+        
+        // Add any custom logic here.
+        
+        return handled
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

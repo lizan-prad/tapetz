@@ -12,6 +12,8 @@ import TransitionButton
 import Hero
 import collection_view_layouts
 import Persei
+import FBSDKCoreKit
+import FBSDKMarketingKit
 
 class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
     
@@ -64,6 +66,17 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
         setupMenu()
         
         fetchWallpapers()
+   
+    }
+    
+    func logSearchEvent(contentType : String, contentData : String, contentId : String, searchString : String, success : Bool) {
+        let params : [String : Any] = [
+            "ContentType" : contentType,
+            "Content" : contentData,
+            "SearchString" : searchString,
+            "Success" :  success
+        ]
+       AppEvents.logEvent(AppEvents.Name.searched, parameters: params)
     }
     
     @objc func favTapped() {
@@ -120,9 +133,11 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
          self.searchField.resignFirstResponder()
         self.startAnimating(type: .ballGridPulse)
         Auth.shared.request(SearchBaseModel.self, urlExt: "search/photos?client_id=\(Constants.clientId)&page=1&per_page=100&query=\(text)", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+            self.logSearchEvent(contentType: text, contentData: model.result?.first?.alt_description ?? "", contentId: model.result?.first?.id ?? "", searchString: text, success: true)
             self.stopAnimating()
             self.wallpapers = model.result
         }) { (error) in
+            self.logSearchEvent(contentType: text, contentData: "", contentId: "", searchString: text, success: false)
             self.stopAnimating()
             
         }
