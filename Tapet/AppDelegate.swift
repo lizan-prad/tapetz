@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // GOOGLE ADS SETUP
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         UIApplication.shared.statusBarStyle = .lightContent
         ////
