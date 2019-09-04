@@ -36,6 +36,13 @@ class DashboardCell: UICollectionViewCell, RealmPersistenceType {
     }
     
     @objc func likeAction() {
+        if UIViewController().getAllIds().contains(model?.id ?? "") {
+            let models : [PictureRealmModel] = self.fetch()
+            let thisModel = models.filter{$0.id == model?.id ?? ""}
+            self.delete(models: thisModel)
+            self.favView.image = UIImage.init(named: "fav")
+            return
+        }
         self.model?.imageData = self.imageView.image?.sd_imageData()
         if let model = model?.toRealm() {
         self.save(models: [model])

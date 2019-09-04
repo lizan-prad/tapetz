@@ -25,7 +25,39 @@ class FavouriteImageViewController: UIViewController {
         let swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(handleGesture(gesture:)))
         swipeGesture.direction = .down
         self.wallpaperImage.addGestureRecognizer(swipeGesture)
+        wallpaperImage.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(didTap)))
+        self.didTap()
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func didTap() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FavSaveViewController") as! FavSaveViewController
+        vc.didTapDownload = {
+            self.savePhoto()
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func savePhoto() {
+        UIImageWriteToSavedPhotosAlbum(self.wallpaperImage.image ?? UIImage(), self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let vc = UIStoryboard.init(name: "ImageDetails", bundle: nil).instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
+            vc.didDismiss = {
+                currentVc = self
+                if (admobDelegate.interstitialView.isReady == true){
+                    admobDelegate.interstitialView.present(fromRootViewController:currentVc)
+                }
+            }
+            self.present(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func backAction(_ sender: Any) {
