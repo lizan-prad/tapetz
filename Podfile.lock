@@ -5,6 +5,7 @@ PODS:
     - collection-view-layouts/Core
   - collection-view-layouts/FlickrLayout (0.2.2):
     - collection-view-layouts/Core
+  - DGActivityIndicatorView (2.1.1)
   - FacebookSDK (5.4.1):
     - FacebookSDK/CoreKit (= 5.4.1)
     - FacebookSDK/MarketingKit (= 5.4.1)
@@ -75,6 +76,7 @@ DEPENDENCIES:
   - Alamofire
   - collection-view-layouts/FacebookLayout
   - collection-view-layouts/FlickrLayout
+  - DGActivityIndicatorView
   - FacebookSDK
   - Google-Mobile-Ads-SDK
   - Hero
@@ -90,6 +92,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - collection-view-layouts
+    - DGActivityIndicatorView
     - FacebookSDK
     - FBSDKCoreKit
     - FBSDKMarketingKit
@@ -112,6 +115,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   FacebookSDK: 71296efd312288ae178764d0187ae45b1be551f4
   FBSDKCoreKit: ba361d4a9d4dc29ff218822b849b22d4f869c7bb
   FBSDKMarketingKit: 4b8d3c6b53b5397cd0b6ba39b1e7034bc9f3a45e
@@ -131,6 +135,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 0971e213278c90a403c74b5e07d34cc149e23bf5
+PODFILE CHECKSUM: 02eb2b64497162cad9be4587f3feaf837fd6c71a
 
 COCOAPODS: 1.6.1
