@@ -23,7 +23,7 @@ class DashboardCell: UICollectionViewCell, RealmPersistenceType {
             likesLabel.text = "\(model?.likes ?? 0)"
             imageView.layer.cornerRadius = 8
             activityIndicator.startAnimating()
-            imageView.sd_setImage(with: URL.init(string: model?.urls?.regular ?? ""), placeholderImage: nil, options: .refreshCached) { (_, _, _, _) in
+            imageView.sd_setImage(with: URL.init(string: model?.urls?.small ?? ""), placeholderImage: nil, options: .refreshCached) { (_, _, _, _) in
                 self.activityIndicator.stopAnimating()
             }
             if UIViewController().getAllIds().contains(model?.id ?? "") {
