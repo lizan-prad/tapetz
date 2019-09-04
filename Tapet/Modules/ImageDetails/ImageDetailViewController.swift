@@ -14,8 +14,6 @@ import Alamofire
 
 class ImageDetailViewController: UIViewController {
     
-
-
     @IBOutlet weak var wallpaperImage: UIImageView!
     var picture: PictureModel?
     var image: UIImage?
