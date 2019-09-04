@@ -107,6 +107,57 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="135.9375"/>
         </scene>
+        <!--Fav Save View Controller-->
+        <scene sceneID="dKe-3L-ZSU">
+            <objects>
+                <viewController storyboardIdentifier="FavSaveViewController" modalPresentationStyle="overFullScreen" id="9Tr-Hg-Zbq" customClass="FavSaveViewController" customModule="Tapet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HdK-DF-7pE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5u9-wL-jwN">
+                                <rect key="frame" x="158" y="772" width="98.5" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save" translatesAutoresizingMaskIntoConstraints="NO" id="lVW-Mj-z28">
+                                        <rect key="frame" x="12" y="7.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="6cf-1o-VWN"/>
+                                            <constraint firstAttribute="width" constant="25" id="BZ2-et-AAM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiO-F3-TaO">
+                                        <rect key="frame" x="45" y="10.5" width="41.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="1" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5MN-kO-9lm"/>
+                                    <constraint firstItem="lVW-Mj-z28" firstAttribute="leading" secondItem="5u9-wL-jwN" secondAttribute="leading" constant="12" id="EZg-Vw-5Am"/>
+                                    <constraint firstAttribute="trailing" secondItem="TiO-F3-TaO" secondAttribute="trailing" constant="12" id="H1B-nF-RUS"/>
+                                    <constraint firstItem="TiO-F3-TaO" firstAttribute="leading" secondItem="lVW-Mj-z28" secondAttribute="trailing" constant="8" id="Jk2-3e-WbQ"/>
+                                    <constraint firstItem="lVW-Mj-z28" firstAttribute="centerY" secondItem="5u9-wL-jwN" secondAttribute="centerY" id="eCY-br-RPh"/>
+                                    <constraint firstItem="TiO-F3-TaO" firstAttribute="centerY" secondItem="lVW-Mj-z28" secondAttribute="centerY" id="m1k-Jz-xEq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cJk-fp-1AM" firstAttribute="bottom" secondItem="5u9-wL-jwN" secondAttribute="bottom" constant="50" id="TpS-Y2-E0r"/>
+                            <constraint firstItem="5u9-wL-jwN" firstAttribute="centerX" secondItem="HdK-DF-7pE" secondAttribute="centerX" id="qRR-CG-8kg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cJk-fp-1AM"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveView" destination="5u9-wL-jwN" id="ngm-e4-wVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ZF-nT-QNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-957" y="67"/>
+        </scene>
         <!--Favourite Image View Controller-->
         <scene sceneID="5hg-ea-WPx">
             <objects>
@@ -153,5 +204,6 @@
     <resources>
         <image name="back" width="32" height="32"/>
         <image name="heart" width="24" height="24"/>
+        <image name="save" width="64" height="64"/>
     </resources>
 </document>

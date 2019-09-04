@@ -23,7 +23,7 @@ class DashboardCell: UICollectionViewCell, RealmPersistenceType {
             likesLabel.text = "\(model?.likes ?? 0)"
             imageView.layer.cornerRadius = 8
             activityIndicator.startAnimating()
-            imageView.sd_setImage(with: URL.init(string: model?.urls?.regular ?? ""), placeholderImage: nil, options: .refreshCached) { (_, _, _, _) in
+            imageView.sd_setImage(with: URL.init(string: model?.urls?.small ?? ""), placeholderImage: nil, options: .refreshCached) { (_, _, _, _) in
                 self.activityIndicator.stopAnimating()
             }
             if UIViewController().getAllIds().contains(model?.id ?? "") {
@@ -36,6 +36,13 @@ class DashboardCell: UICollectionViewCell, RealmPersistenceType {
     }
     
     @objc func likeAction() {
+        if UIViewController().getAllIds().contains(model?.id ?? "") {
+            let models : [PictureRealmModel] = self.fetch()
+            let thisModel = models.filter{$0.id == model?.id ?? ""}
+            self.delete(models: thisModel)
+            self.favView.image = UIImage.init(named: "fav")
+            return
+        }
         self.model?.imageData = self.imageView.image?.sd_imageData()
         if let model = model?.toRealm() {
         self.save(models: [model])

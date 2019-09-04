@@ -39,6 +39,7 @@
 		A00EE9C023168020007D4E14 /* ImageDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */; };
 		A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C12316894E007D4E14 /* SavedViewController.swift */; };
 		A00EE9C42316A85A007D4E14 /* AdMobDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */; };
+		A01B4D37231FD56C00101E31 /* FavSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4D36231FD56C00101E31 /* FavSaveViewController.swift */; };
 		A039235D231949A60053411A /* FavouriteImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039235C231949A60053411A /* FavouriteImageViewController.swift */; };
 		A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */; };
 		A0BEDDA023192B7900A3CAB8 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */; };
@@ -111,6 +112,7 @@
 		A00EE9BF2316801F007D4E14 /* ImageDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataViewController.swift; sourceTree = "<group>"; };
 		A00EE9C12316894E007D4E14 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A00EE9C32316A85A007D4E14 /* AdMobDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDelegate.swift; sourceTree = "<group>"; };
+		A01B4D36231FD56C00101E31 /* FavSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavSaveViewController.swift; sourceTree = "<group>"; };
 		A039235C231949A60053411A /* FavouriteImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteImageViewController.swift; sourceTree = "<group>"; };
 		A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */,
 				A0BEDDA323192C2B00A3CAB8 /* FavouritesCell.swift */,
 				A039235C231949A60053411A /* FavouriteImageViewController.swift */,
+				A01B4D36231FD56C00101E31 /* FavSaveViewController.swift */,
 			);
 			path = Favourites;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tapet/Pods-Tapet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
@@ -547,6 +551,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
@@ -602,6 +607,7 @@
 				A00EE9AB2316452D007D4E14 /* Profile_image.swift in Sources */,
 				A00EE9AE2316452D007D4E14 /* Sponsorship.swift in Sources */,
 				A00EE9C22316894E007D4E14 /* SavedViewController.swift in Sources */,
+				A01B4D37231FD56C00101E31 /* FavSaveViewController.swift in Sources */,
 				A00EE99923164369007D4E14 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

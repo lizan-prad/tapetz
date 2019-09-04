@@ -11,10 +11,12 @@ import Hero
 import SDWebImage
 import GoogleMobileAds
 import Alamofire
+import DGActivityIndicatorView
 
 class ImageDetailViewController: UIViewController {
     
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var wallpaperImage: UIImageView!
     var picture: PictureModel?
     var image: UIImage?
@@ -26,9 +28,10 @@ class ImageDetailViewController: UIViewController {
         self.hero.isEnabled = true
         self.navigationController?.navigationBar.isHidden = true
         
-       
-        
+       let activityView = self.getAnimatedView()
+        activityView.startAnimating()
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
+            activityView.stopAnimating()
             if self.getAllIds().contains(self.picture?.id ?? "" ) {
             self.picture?.imageData = image?.sd_imageData()
             if let model = self.picture?.toRealm() {
@@ -103,5 +106,12 @@ extension UIViewController: RealmPersistenceType {
     func getAllIds() -> [String] {
         let datas: [PictureRealmModel] = self.fetch()
         return datas.map{$0.id}
+    }
+    
+    func getAnimatedView() -> DGActivityIndicatorView {
+        let dgView = DGActivityIndicatorView.init(type: .ballGridPulse, tintColor: Constants.baseColor)
+        dgView?.frame = CGRect.init(x: self.view.center.x - 12, y: self.view.center.y - 12, width: 35, height: 35)
+        self.view.addSubview(dgView ?? DGActivityIndicatorView())
+        return dgView ?? DGActivityIndicatorView()
     }
 }
