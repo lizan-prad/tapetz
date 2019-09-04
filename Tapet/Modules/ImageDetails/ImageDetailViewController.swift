@@ -15,6 +15,7 @@ import Alamofire
 class ImageDetailViewController: UIViewController {
     
 
+
     @IBOutlet weak var wallpaperImage: UIImageView!
     var picture: PictureModel?
     var image: UIImage?
@@ -25,10 +26,11 @@ class ImageDetailViewController: UIViewController {
         wallpaperImage.hero.id = picture?.id
         self.hero.isEnabled = true
         self.navigationController?.navigationBar.isHidden = true
-        
-       
-        
+    
+         self.startAnimating(type: .ballGridPulse)
         wallpaperImage.sd_setImage(with: URL.init(string: picture?.urls?.full ?? ""), placeholderImage: image, options: .refreshCached) { (image, error, _, url) in
+            
+             self.stopAnimating()
             if self.getAllIds().contains(self.picture?.id ?? "" ) {
             self.picture?.imageData = image?.sd_imageData()
             if let model = self.picture?.toRealm() {
