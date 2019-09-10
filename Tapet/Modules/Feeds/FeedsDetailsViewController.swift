@@ -53,13 +53,35 @@ class FeedsDetailsViewController: UIViewController {
             
         }
     }
+    
+    func savePhoto() {
+        UIImageWriteToSavedPhotosAlbum(self.feedImage.image ?? UIImage(), self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
+            vc.didDismiss = {
+                currentVc = self
+                if (admobDelegate.interstitialView.isReady == true){
+                    admobDelegate.interstitialView.present(fromRootViewController:currentVc)
+                }
+            }
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+    }
 
     @IBAction func favAction(_ sender: Any) {
         
     }
     
     @IBAction func downloadAction(_ sender: Any) {
-        
+        savePhoto()
     }
     
     @IBAction func sendAction(_ sender: Any) {
