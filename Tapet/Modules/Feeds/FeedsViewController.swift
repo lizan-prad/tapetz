@@ -76,6 +76,7 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.userImage.hero.id = cell.model?.id
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeedsDetailsViewController") as! FeedsDetailsViewController
         vc.model = wallpapers?[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.image = cell.userImage.image
+        self.present(vc, animated: true, completion: nil)
     }
 }

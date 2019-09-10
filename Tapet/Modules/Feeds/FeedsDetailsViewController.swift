@@ -12,6 +12,7 @@ import Alamofire
 
 class FeedsDetailsViewController: UIViewController {
 
+    @IBOutlet weak var infoVIew: UIView!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var feedImage: UIImageView!
@@ -21,13 +22,27 @@ class FeedsDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoVIew.layer.cornerRadius = 5
         feedImage.hero.id = model?.id
         self.hero.isEnabled = true
-        feedImage.sd_setImage(with: nil, placeholderImage: image, options: .refreshCached) { (_, _, _, _) in
+        feedImage.sd_setImage(with: URL.init(string: model?.urls?.full ?? "") , placeholderImage: image, options: .refreshCached) { (_, _, _, _) in
             
         }
-        getImages()
+        view.isUserInteractionEnabled = true
+        let swipe = UISwipeGestureRecognizer.init(target: self, action: #selector(cancel))
+        swipe.direction = .down
+        self.view.addGestureRecognizer(swipe)
+        self.info.text = model?.descriptions ?? model?.alt_description
+        self.desc.text = model?.alt_description
+//        getImages()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
+    }
+    @objc func cancel() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func getImages() {
