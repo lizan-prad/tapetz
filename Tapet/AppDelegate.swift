@@ -10,6 +10,8 @@ import UIKit
 import GoogleMobileAds
 import FBSDKCoreKit
 
+let appdelegate = UIApplication.shared.delegate as! AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -38,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         } else {
 //            UIView.transition(with: window ?? UIWindow(), duration: 0.4, options: .showHideTransitionViews, animations: {
-                self.window?.rootViewController = UINavigationController.init(rootViewController: UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController)
+              self.window?.rootViewController =  self.loadHome()
 //            }, completion: { completed in
 //                // maybe do something here
 //            })
@@ -79,8 +81,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func loadHome() -> UITabBarController{
+        let feedVc =  UIStoryboard.init(name: "Feeds", bundle: nil).instantiateViewController(withIdentifier: "FeedsViewController") as! FeedsViewController
+        let tabItem1                               = UITabBarItem()
+        
+        tabItem1.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white] , for: .normal)
+        
+        tabItem1.image                                                    = UIImage(named:"1515183-64")
+        tabItem1.title                                                    = "Feeds"
+        tabItem1.selectedImage = UIImage(named:"1515183-64")
+        feedVc.tabBarItem                                  = tabItem1
+        
+        
+        let dashboardVc =  UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+        let tabItem2                               = UITabBarItem()
+        
+        tabItem2.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.lightGray] , for: .normal)
+        
+        tabItem2.image                                                    = UIImage(named:"352300-64")
+        tabItem2.title                                                    = "Wallpapers"
+        tabItem2.selectedImage = UIImage(named:"352300-64")
+        dashboardVc.tabBarItem                                  = tabItem2
+        
+        let favoriteVc =  UIStoryboard.init(name: "Favourites", bundle: nil).instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+        let tabItem3                               = UITabBarItem()
+        
+        tabItem3.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.lightGray] , for: .normal)
+        
+        tabItem3.image                                                    = UIImage(named:"fav")
+        tabItem3.title                                                    = "Favorites"
+        tabItem3.selectedImage = UIImage(named:"fav")
+        favoriteVc.tabBarItem                                  = tabItem3
+        
+        let tbcontroller = UITabBarController()
+        
+        tbcontroller.viewControllers = [UINavigationController.init(rootViewController: feedVc), UINavigationController.init(rootViewController: dashboardVc),UINavigationController.init(rootViewController: favoriteVc)]
+        
+        tbcontroller.tabBar.barTintColor = UIColor.init(hex: "#181A1A")
+        tbcontroller.tabBar.tintColor = Constants.baseColor
+        return tbcontroller
+    }
+    
 }
 
 extension UIViewController {

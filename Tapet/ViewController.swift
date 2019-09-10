@@ -63,8 +63,8 @@ class ViewController: UIViewController {
                 // .shake: when you want to reflect to the user that the task did not complete successfly
                 // .normal
                 self.enterBtn.stopAnimation(animationStyle: .expand, completion: {
-                    let secondVC = UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
-                    self.present(UINavigationController.init(rootViewController: secondVC) , animated: true, completion: nil)
+//                    let secondVC = UIStoryboard.init(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+                    self.present(appdelegate.loadHome() , animated: true, completion: nil)
                 })
             })
         })

@@ -114,4 +114,21 @@ extension UIViewController: RealmPersistenceType {
         self.view.addSubview(dgView ?? DGActivityIndicatorView())
         return dgView ?? DGActivityIndicatorView()
     }
+    
+    func getSmallAnimatedView() -> DGActivityIndicatorView {
+        let dgView = DGActivityIndicatorView.init(type: .ballGridPulse, tintColor: Constants.baseColor)
+        dgView?.frame = CGRect.init(x: self.view.center.x - 12, y: self.view.center.y - 65, width: -10, height: -10)
+        self.view.addSubview(dgView ?? DGActivityIndicatorView())
+        return dgView ?? DGActivityIndicatorView()
+    }
+}
+
+extension UITableViewCell {
+    
+    func getAnimatedView(container: UIView) -> DGActivityIndicatorView {
+        let dgView = DGActivityIndicatorView.init(type: .ballGridPulse, tintColor: Constants.baseColor)
+        dgView?.frame = CGRect.init(x: container.center.x - 25, y: container.center.y - 25, width: 20, height: 20)
+        container.addSubview(dgView ?? DGActivityIndicatorView())
+        return dgView ?? DGActivityIndicatorView()
+    }
 }

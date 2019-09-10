@@ -40,12 +40,14 @@ class DashboardCell: UICollectionViewCell, RealmPersistenceType {
             let models : [PictureRealmModel] = self.fetch()
             let thisModel = models.filter{$0.id == model?.id ?? ""}
             self.delete(models: thisModel)
+            likesLabel.text = "\((model?.likes ?? 0) - 1)"
             self.favView.image = UIImage.init(named: "fav")
             return
         }
         self.model?.imageData = self.imageView.image?.sd_imageData()
         if let model = model?.toRealm() {
         self.save(models: [model])
+            likesLabel.text = "\((self.model?.likes ?? 0) + 1)"
             favView.image = UIImage.init(named: "heart")
         }
     }

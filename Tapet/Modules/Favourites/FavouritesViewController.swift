@@ -38,8 +38,12 @@ class FavouritesViewController: UIViewController, LayoutDelegate {
         let imgView = UIImageView.init(image: UIImage.init(named: "logo"))
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
-        fetchPictures()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchPictures()
     }
     
     func fetchPictures() {

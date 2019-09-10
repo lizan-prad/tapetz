@@ -39,7 +39,14 @@ class SearchBaseModel: Mappable {
 
 class PictureModel: Mappable {
     var id : String?
-    var created_at : String?
+    var created_at : String? {
+        didSet {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-mm-dd'T'HH:mm:ssZ"
+            self.imageDate = formatter.date(from: created_at ?? "")
+        }
+    }
+    var imageDate: Date?
     var updated_at : String?
     var width : Int?
     var height : Int?

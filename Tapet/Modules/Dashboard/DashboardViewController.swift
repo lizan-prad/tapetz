@@ -58,7 +58,7 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "search"), style: .plain, target: self, action: #selector(searchTapped))
-         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "fav"), style: .plain, target: self, action: #selector(favTapped))
+//         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "fav"), style: .plain, target: self, action: #selector(favTapped))
         searchField.round()
         searchField.addTarget(self, action: #selector(didChangeText(sender:)), for: .editingChanged)
         searchField.attributedPlaceholder = NSAttributedString.init(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
