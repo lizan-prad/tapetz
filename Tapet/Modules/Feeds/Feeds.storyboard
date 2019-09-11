@@ -241,11 +241,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8w-xU-LWZ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8w-xU-LWZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-Yo-KBc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="636.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="598.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-cX-eeZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
@@ -304,8 +304,11 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-CS-JYt">
-                                                <rect key="frame" x="20" y="578.5" width="374" height="18"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-CS-JYt">
+                                                <rect key="frame" x="20" y="578.5" width="374" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="maI-2c-nNz"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -315,7 +318,7 @@
                                         <constraints>
                                             <constraint firstItem="tqY-Be-tvG" firstAttribute="leading" secondItem="zLi-Yo-KBc" secondAttribute="leading" constant="15" id="64X-Ui-81Z"/>
                                             <constraint firstItem="3mo-cX-eeZ" firstAttribute="top" secondItem="zLi-Yo-KBc" secondAttribute="top" id="8Xx-A1-yfV"/>
-                                            <constraint firstAttribute="bottom" secondItem="TNx-CS-JYt" secondAttribute="bottom" constant="40" id="Gr3-fg-4aQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="TNx-CS-JYt" secondAttribute="bottom" constant="20" id="Gr3-fg-4aQ"/>
                                             <constraint firstItem="tqY-Be-tvG" firstAttribute="top" secondItem="3mo-cX-eeZ" secondAttribute="bottom" id="Hy0-2Q-4kZ"/>
                                             <constraint firstItem="S25-jo-tTR" firstAttribute="bottom" secondItem="0My-aY-1Kt" secondAttribute="bottom" constant="7" id="IdP-8e-pCS"/>
                                             <constraint firstAttribute="trailing" secondItem="0My-aY-1Kt" secondAttribute="trailing" constant="20" id="MA8-fC-3MM"/>
@@ -365,6 +368,7 @@
                     </view>
                     <connections>
                         <outlet property="desc" destination="TNx-CS-JYt" id="2Dr-R4-aEJ"/>
+                        <outlet property="favBtn" destination="i87-Wh-6HE" id="ZgN-zQ-Swe"/>
                         <outlet property="feedImage" destination="3mo-cX-eeZ" id="fzn-wg-gUV"/>
                         <outlet property="info" destination="SCO-v5-52N" id="Ktg-f1-BmD"/>
                         <outlet property="infoVIew" destination="S25-jo-tTR" id="v7k-9T-GUQ"/>
