@@ -12,15 +12,8 @@ import Alamofire
 class FeedsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var wallpapers: [PictureModel]? {
-        didSet {
-            wallpapers = self.wallpapers?.sorted(by: { (a, b) -> Bool in
-                return a.imageDate ?? Date() > b.imageDate ?? Date()
-            })
-            self.tableView.reloadData()
-        }
-    }
+    var ind = 1
+    var wallpapers: [PictureModel]?
     
     var trendingUser: [PictureModel]? {
         didSet {
@@ -38,11 +31,36 @@ class FeedsViewController: UIViewController {
         getImages()
     }
     
+    func reloadData() {
+        wallpapers = self.wallpapers?.sorted(by: { (a, b) -> Bool in
+            return a.imageDate ?? Date() > b.imageDate ?? Date()
+        })
+        self.tableView.reloadData()
+    }
+    
     func getImages() {
+        ind = 1
         self.startAnimating(type: .ballGridPulse)
-        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=150", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.stopAnimating()
             self.wallpapers = model.data
+            self.reloadData()
+        }) { (error) in
+            self.stopAnimating()
+            
+        }
+    }
+    
+    func paginate(index: Int) {
+        self.startAnimating(type: .ballGridPulse)
+        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=\(index)&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+            self.stopAnimating()
+            var walla = self.wallpapers ?? []
+            model.data?.forEach{walla.append($0)}
+            self.wallpapers = walla.sorted(by: { (a, b) -> Bool in
+                return a.imageDate ?? Date() > b.imageDate ?? Date()
+            })
+            self.tableView.reloadData()
         }) { (error) in
             self.stopAnimating()
             
@@ -64,6 +82,10 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! FeedCell
         cell.model = self.wallpapers?[indexPath.row]
+        if indexPath.row == (wallpapers?.count ?? 0) - 1 {
+            ind = ind + 1
+            self.paginate(index: ind )
+        }
         return cell
     }
     

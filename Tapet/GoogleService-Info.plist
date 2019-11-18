@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>47083961383-31cpkvmp54d3epdn4tup80llgb3v0c9b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.47083961383-31cpkvmp54d3epdn4tup80llgb3v0c9b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDz1Gzr5JlSxyJc-Bynh44GKbX6s8PCGPg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>47083961383</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lizan.tapet</string>
+	<key>PROJECT_ID</key>
+	<string>tapetz-5189c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tapetz-5189c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:47083961383:ios:3eb293b61f06f45f4f2202</string>
+	<key>DATABASE_URL</key>
+	<string>https://tapetz-5189c.firebaseio.com</string>
+</dict>
+</plist>

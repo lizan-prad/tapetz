@@ -20,6 +20,7 @@ target 'Tapet' do
   pod 'Persei', '~> 3.0'
   pod 'FacebookSDK'
   pod 'DGActivityIndicatorView'
+  pod 'Firebase/Analytics'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

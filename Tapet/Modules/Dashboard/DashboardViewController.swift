@@ -28,6 +28,9 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var ind = 1
+    var srechTxt: String?
+    
     let categories: [(String,UIImage?)] = [("All",UIImage.init(named: "lo")),("Nepal",UIImage.init(named: "nepal")), ("Dubai",UIImage.init(named: "dubai")), ("Cute",UIImage.init(named: "cute")), ("Girls",UIImage.init(named: "Girls")), ("Animals",UIImage.init(named: "animal")), ("Landscape",UIImage.init(named: "landscape")), ("Nature",UIImage.init(named: "nature")), ("City",UIImage.init(named: "City")), ("Fashion",UIImage.init(named: "fashion")), ("Underwater",UIImage.init(named: "underwater"))]
     
     var items: [MenuItem]? {
@@ -36,16 +39,16 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
         }
     }
     
-    var wallpapers: [PictureModel]? {
-        didSet {
-            let range = 50...150
-            cellsSizes.removeAll()
-            self.cellsSizes = wallpapers?.map({ (_) -> CGSize in
-                let height = CGFloat(Int.random(in: range))
-                return CGSize(width: 0.1, height: height)
-            }) ?? []
-            self.setupLayoput()
-        }
+    var wallpapers: [PictureModel]?
+    
+    func setLayout() {
+        let range = 50...150
+        cellsSizes.removeAll()
+        self.cellsSizes = wallpapers?.map({ (_) -> CGSize in
+            let height = CGFloat(Int.random(in: range))
+            return CGSize(width: 0.1, height: height)
+        }) ?? []
+        self.setupLayoput()
     }
     
     override func viewDidLoad() {
@@ -130,12 +133,14 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
     }
     
     func searchWallpapers(text: String) {
+        self.srechTxt = text
          self.searchField.resignFirstResponder()
         self.startAnimating(type: .ballGridPulse)
         Auth.shared.request(SearchBaseModel.self, urlExt: "search/photos?client_id=\(Constants.clientId)&page=1&per_page=100&query=\(text)", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.logSearchEvent(contentType: text, contentData: model.result?.first?.alt_description ?? "", contentId: model.result?.first?.id ?? "", searchString: text, success: true)
             self.stopAnimating()
             self.wallpapers = model.result
+            self.setLayout()
         }) { (error) in
             self.logSearchEvent(contentType: text, contentData: "", contentId: "", searchString: text, success: false)
             self.stopAnimating()
@@ -144,15 +149,48 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
     }
     
     func fetchWallpapers() {
-       
+       self.ind = 1
+        self.srechTxt = nil
         self.startAnimating(type: .ballGridPulse)
-        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=150", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+        Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: "photos?client_id=\(Constants.clientId)&page=1&per_page=100", method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
             self.stopAnimating()
             self.wallpapers = model.data
+            self.setLayout()
         }) { (error) in
             self.stopAnimating()
      
         }
+    }
+    
+    func paginate(index: Int) {
+        self.startAnimating(type: .ballGridPulse)
+        let url = srechTxt == nil ? "photos?client_id=\(Constants.clientId)&page=\(index)&per_page=100" : "search/photos?client_id=\(Constants.clientId)&page=\(index)&per_page=100&query=\(srechTxt ?? "")"
+        if srechTxt == nil {
+            Auth.shared.requestArray(BasePictureModel<PictureModel>.self, urlExt: url, method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+                self.stopAnimating()
+                var wallpap = self.wallpapers ?? []
+                model.data?.forEach{wallpap.append($0)}
+                self.wallpapers = wallpap
+                self.collectionView.reloadData()
+            }) { (error) in
+                self.stopAnimating()
+                
+            }
+        } else {
+            Auth.shared.request(SearchBaseModel.self, urlExt: url, method: .get, param: nil, encoding: URLEncoding.default, headers: nil, completion: { (model) in
+                self.logSearchEvent(contentType: self.srechTxt ?? "", contentData: model.result?.first?.alt_description ?? "", contentId: model.result?.first?.id ?? "", searchString: self.srechTxt ?? "", success: true)
+                self.stopAnimating()
+                var wallpap = self.wallpapers ?? []
+                model.result?.forEach{wallpap.append($0)}
+                self.wallpapers = wallpap
+                self.collectionView.reloadData()
+            }) { (error) in
+                self.logSearchEvent(contentType: self.srechTxt ?? "", contentData: "", contentId: "", searchString: self.srechTxt ?? "", success: false)
+                self.stopAnimating()
+                
+            }
+        }
+        
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -189,6 +227,11 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCell", for: indexPath) as! DashboardCell
         cell.model = wallpapers?[indexPath.row]
+        
+        if indexPath.row == (wallpapers?.count ?? 0) - 1 {
+            ind = ind + 1
+            self.paginate(index: ind )
+        }
         return cell
     }
     

@@ -47,6 +47,7 @@
 		A01719192327CC5A000AA59F /* FeedsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01719182327CC5A000AA59F /* FeedsDetailsViewController.swift */; };
 		A01B4D37231FD56C00101E31 /* FavSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4D36231FD56C00101E31 /* FavSaveViewController.swift */; };
 		A039235D231949A60053411A /* FavouriteImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039235C231949A60053411A /* FavouriteImageViewController.swift */; };
+		A081D1D12382877F007BD1B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A081D1D02382877F007BD1B8 /* GoogleService-Info.plist */; };
 		A08F29F623178B2000C7CA44 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */; };
 		A0BEDDA023192B7900A3CAB8 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */; };
 		A0BEDDA223192C0A00A3CAB8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */; };
@@ -126,6 +127,7 @@
 		A01719182327CC5A000AA59F /* FeedsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsDetailsViewController.swift; sourceTree = "<group>"; };
 		A01B4D36231FD56C00101E31 /* FavSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavSaveViewController.swift; sourceTree = "<group>"; };
 		A039235C231949A60053411A /* FavouriteImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteImageViewController.swift; sourceTree = "<group>"; };
+		A081D1D02382877F007BD1B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A08F29F523178B2000C7CA44 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A0BEDD9F23192B7900A3CAB8 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		A0BEDDA123192C0A00A3CAB8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		7BB34E942315A16B00DAD5F5 /* Tapet */ = {
 			isa = PBXGroup;
 			children = (
+				A081D1D02382877F007BD1B8 /* GoogleService-Info.plist */,
 				A00EE9AF23164E5B007D4E14 /* Modules */,
 				A00EE9A2231643C6007D4E14 /* Base */,
 				7BB34EC32315A94000DAD5F5 /* Models */,
@@ -458,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A081D1D12382877F007BD1B8 /* GoogleService-Info.plist in Resources */,
 				7BB34EA02315A16F00DAD5F5 /* LaunchScreen.storyboard in Resources */,
 				7BB34E9D2315A16F00DAD5F5 /* Assets.xcassets in Resources */,
 				7BB34E9B2315A16B00DAD5F5 /* Main.storyboard in Resources */,
