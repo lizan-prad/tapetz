@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import FBSDKCoreKit
+import Firebase
 
 let appdelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         UIApplication.shared.statusBarStyle = .lightContent
         ////
+        FirebaseApp.configure()
         nav.barTintColor = UIColor.init(hex: "#252627")
         nav.tintColor = Constants.baseColor
         nav.isTranslucent = false
