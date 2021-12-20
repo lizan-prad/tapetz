@@ -57,6 +57,7 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
         self.searchBtn.isHidden = searchField.text?.count == 0
         collectionView.dataSource = self
         collectionView.delegate = self
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(hex: "252627")
         let imgView = UIImageView.init(image: UIImage.init(named: "logo"))
         imgView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imgView
@@ -91,7 +92,7 @@ class DashboardViewController: CustomTransitionViewController, LayoutDelegate {
         let menu = MenuView()
         menu.items = self.items ?? []
         menu.delegate = self
-        menu.backgroundColor = UIColor.init(hex: "#252627")
+        menu.backgroundColor = UIColor.init(hex: "252627")
         collectionView.addSubview(menu)
     }
     

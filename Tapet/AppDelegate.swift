@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         ////
         FirebaseApp.configure()
-        nav.barTintColor = UIColor.init(hex: "#252627")
+        nav.barTintColor = UIColor.init(hex: "252627")
         nav.tintColor = Constants.baseColor
         nav.isTranslucent = false
         nav.shadowImage = UIImage()
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let feedVc =  UIStoryboard.init(name: "Feeds", bundle: nil).instantiateViewController(withIdentifier: "FeedsViewController") as! FeedsViewController
         let tabItem1                               = UITabBarItem()
         
-        tabItem1.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white] , for: .normal)
+        tabItem1.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.lightGray] , for: .normal)
         
         tabItem1.image                                                    = UIImage(named:"1515183-64")
         tabItem1.title                                                    = "Feeds"
@@ -120,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tbcontroller.viewControllers = [UINavigationController.init(rootViewController: feedVc), UINavigationController.init(rootViewController: dashboardVc),UINavigationController.init(rootViewController: favoriteVc)]
         
-        tbcontroller.tabBar.barTintColor = UIColor.init(hex: "#181A1A")
+        tbcontroller.tabBar.barTintColor = UIColor.init(hex: "181A1A")
         tbcontroller.tabBar.tintColor = Constants.baseColor
         return tbcontroller
     }
